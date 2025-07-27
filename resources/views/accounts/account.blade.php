@@ -140,10 +140,10 @@
         <p class="text-gray-600">Join our marketplace</p>
       </div>
       <div class="space-y-4">
-        <a href="/seller/login" class="block w-full bg-green-600 hover:green-red-700 text-white text-center font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg">
+        <a href="{{ route('seller.login') }}" class="block w-full bg-green-600 hover:green-red-700 text-white text-center font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg">
           Seller Login
         </a>
-        <a href="/seller/register" class="block w-full bg-white hover:bg-gray-50 text-green-600 border-2 border-green-600 text-center font-semibold py-3 px-6 rounded-lg transition duration-300">
+        <a href="{{ route('seller.register') }}" class="block w-full bg-white hover:bg-gray-50 text-green-600 border-2 border-green-600 text-center font-semibold py-3 px-6 rounded-lg transition duration-300">
           Seller Registration
         </a>
       </div>
