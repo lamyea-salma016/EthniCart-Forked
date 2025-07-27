@@ -123,3 +123,35 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware('auth');
+
+
+
+
+
+// sellers route
+use App\Http\Controllers\SellerAuthController;
+use App\Http\Controllers\Seller\ProductController;
+
+Route::prefix('seller')->name('seller.')->group(function () {
+    
+    // Public routes (open to anyone)
+    Route::get('/register', [SellerAuthController::class, 'showRegisterForm'])->name('register');
+    Route::post('/register', [SellerAuthController::class, 'register']);
+
+    Route::get('/login', [SellerAuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [SellerAuthController::class, 'login']);
+
+    // Protected seller-only routes
+    Route::middleware('auth:seller')->group(function () {
+        Route::get('/dashboard', function () {
+            return view('seller.dashboard');
+        })->name('dashboard');
+
+        Route::post('/logout', [SellerAuthController::class, 'logout'])->name('logout');
+
+        // Future: seller product management
+        Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+        Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+        Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+    });
+});
