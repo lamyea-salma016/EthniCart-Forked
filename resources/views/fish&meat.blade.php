@@ -1,33 +1,33 @@
 @extends('layouts.app')
-@section('title', 'EthniCart | Foods')
+@section('title', 'EthniCart | Fish & Meat')
 <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 @section('content')
 
 <!-- Hero Section -->
-<div class="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 min-h-screen">
+<div class="min-h-screen" style="background: linear-gradient(135deg, #f0f9e8 0%, #e8f5c8 50%, #ffffff 100%);">
     <!-- Header Banner -->
-    <div class="relative overflow-hidden bg-gradient-to-r from-green-300 via-yellow-300 to-green-300 py-8">
+    <div class="relative overflow-hidden py-8" style="background: linear-gradient(90deg, #8bc34a 0%, #cddc39 50%, #8bc34a 100%);">
         <div class="absolute inset-0 bg-black opacity-10"></div>
         <div class="relative container mx-auto px-4 text-center">
             <h1 class="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">
-                Foods <span class="text-green-200"></span>
+                Fish & Meat <span class="text-green-200"></span>
             </h1>
-            <p class="text-xl md:text-2xl text-green-100 mb-8 max-w-3gitxl mx-auto">
-                From fresh fruits to delightful sweets, discover the finest selection of authentic foods
+            <p class="text-xl md:text-2xl text-green-100 mb-8 max-w-3xl mx-auto">
+                From fresh catch to premium cuts, discover the finest selection of authentic fish and meat
             </p>
             <div class="flex justify-center">
                 <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2">
-                    <span class="text-white font-medium">🌱 Farm Fresh • 🌿 Organic • 🍃 Natural</span>
+                    <span class="text-white font-medium">🐟 Fresh Daily • 🥩 Premium Quality • ❄️ Chilled</span>
                 </div>
             </div>
         </div>
         <!-- Decorative elements -->
-        <div class="absolute top-10 left-10 text-green-200 opacity-30">
+        <div class="absolute top-10 left-10 opacity-30" style="color: #f0f9e8;">
             <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"/>
             </svg>
         </div>
-        <div class="absolute bottom-5 right-5 text-green-200 opacity-20">
+        <div class="absolute bottom-5 right-5 opacity-20" style="color: #8bc34a;">
             <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"/>
             </svg>
@@ -40,46 +40,61 @@
         <h2 class="text-4xl font-bold text-gray-800 mb-4">Explore Our Categories</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Fruits Category -->
+    <div class="flex justify-center">
+    <!-- Increased container width -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-7xl px-6">
+        
+        <!-- Fish Category -->
         <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
-            <a href="{{ url('/A1_foods_fruits') }}" class="block">
-                <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-green-300">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="{{ asset('images/fuits.jpg') }}" alt="Fruits" class="w-full h-full object-cover" />
+            <a href="{{ url('/A1_foods_fish') }}" class="block">
+                <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-green-300 h-[600px]  w-[500px]  flex flex-col">
+                    
+                    <!-- Larger Image Section -->
+                    <div class="relative h-[410px] overflow-hidden">
+                        <img src="{{ asset('images/fish.jpg') }}" alt="Fish" class="w-full h-full object-cover" />
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-green-600 transition-colors">
-                            Fruits
+
+                    <!-- Text Section -->
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-3 group-hover:text-green-600 transition-colors">
+                            Fish
                         </h3>
-                        <p class="text-gray-600 text-sm mb-4">
-                            Fresh, juicy fruits packed with natural vitamins and flavors
+                        <p class="text-gray-700 text-base">
+                            Fresh catch from rivers and seas, rich in omega-3 and nutrients
                         </p>
                     </div>
+
                 </div>
             </a>
         </div>
 
-        <!-- Sweets Category -->
+        <!-- Meat Category -->
         <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
-            <a href="{{ url('/A2_foods_sweets') }}" class="block">
-                <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-pink-300">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="{{ asset('images/sweets.jpg') }}" alt="Sweets" class="w-full h-full object-cover" />
+            <a href="{{ url('/A2_foods_meat') }}" class="block">
+                <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-yellow-300 h-[600px]  w-[500px]  flex flex-col">
+                    
+                    <!-- Larger Image Section -->
+                    <div class="relative h-[410px] overflow-hidden">
+                        <img src="{{ asset('images/meat.jpg') }}" alt="Meat" class="w-full h-full object-cover" />
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-pink-600 transition-colors">
-                            Sweets
+
+                    <!-- Text Section -->
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-3 group-hover:text-yellow-600 transition-colors">
+                            Meat
                         </h3>
-                        <p class="text-gray-600 text-sm mb-4">
-                            Traditional and modern sweets to satisfy your cravings
+                        <p class="text-gray-700 text-base">
+                            Premium quality cuts of beef, mutton, and chicken from trusted sources
                         </p>
                     </div>
+
                 </div>
             </a>
         </div>
-        
+
     </div>
+</div>
+
 </div>
 
 
@@ -91,42 +106,42 @@
 $products = [
     [
         'id' => 1,
-        'name' => 'Rajshahi Mango (Himsagar)',
-        'description' => 'Sweet, juicy seasonal mango',
-        'price' => '৳550/kg',
-        'image' => asset('images/product_images/01_himsagor.jpeg')
+        'name' => 'Fresh Hilsa Fish (Ilish)',
+        'description' => 'Premium Bengali fish, fresh from Padma river',
+        'price' => '৳1200/kg',
+        'image' => asset('images/product_images/01_hilsa.jpeg')
     ],
     [
         'id' => 2,
-        'name' => 'Tangail Shari (Handloom Cotton)',
-        'description' => 'Authentic Tangail weave, pure cotton',
-        'price' => '৳1800',
-        'image' => asset('images/product_images/02_shari.jpg')
+        'name' => 'Premium Beef (Khasi)',
+        'description' => 'Fresh, tender beef cuts, halal certified',
+        'price' => '৳850/kg',
+        'image' => asset('images/product_images/02_beef.jpg')
     ],
     [
         'id' => 3,
-        'name' => 'Natore-er Kacha Golla',
-        'description' => 'Soft, fresh dairy sweet',
-        'price' => '৳350/box',
-        'image' => asset('images/product_images/03_kachaGolla.jpeg')
+        'name' => 'Rui Fish (Rohu)',
+        'description' => 'Large, fresh water fish, perfect for curry',
+        'price' => '৳420/kg',
+        'image' => asset('images/product_images/03_rui.jpeg')
     ],
     [
         'id' => 4,
-        'name' => 'Chui Jhal Masala Blend',
-        'description' => 'Handmade spice mix with Chui',
-        'price' => '৳199',
-        'image' => asset('images/product_images/04_chuiJhal.jpg')
+        'name' => 'Country Chicken (Deshi Murgi)',
+        'description' => 'Free-range chicken, naturally raised',
+        'price' => '৳650/kg',
+        'image' => asset('images/product_images/04_chicken.jpg')
     ],
    
 ];
 @endphp
 
-<section class="bg-gradient-to-br from-green-200 via-lime-100 to-green-50 min-h-screen py-8">
+<section class="min-h-screen py-8" style="background: linear-gradient(135deg, #f9fff7 0%, #f0f9e8 50%, #e8f5c8 100%);">
     <div class="container mx-auto px-4">
         <!-- Header Section -->
         <div class="text-center mb-12">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                <span class="text-green-600">Food</span> Section
+                <span class="text-green-600">Fish</span> & <span class="text-yellow-600">Meat</span> Section
             </h1>
            
         </div>
@@ -138,12 +153,12 @@ $products = [
                     <h2 class="text-xl font-semibold text-gray-900">{{ count($products) }} Products</h2>
                     <div class="hidden sm:flex items-center gap-2 text-sm text-gray-500">
                         <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span>Authentic & Fresh</span>
+                        <span>Fresh & Premium Quality</span>
                     </div>
                 </div>
                 
                 <div class="flex items-center gap-3">
-                    <select class="px-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-lime-500 bg-white/90">
+                    <select class="px-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-white/90">
                         <option>Sort by Featured</option>
                         <option>Price: Low to High</option>
                         <option>Price: High to Low</option>
@@ -163,7 +178,7 @@ $products = [
         <!-- Products Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             @foreach($products as $product)
-            <div class="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-sm border border-white/30 overflow-hidden hover:shadow-lg hover:border-lime-200/50 hover:bg-white/95 transition-all duration-300">
+            <div class="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-sm border border-white/30 overflow-hidden hover:shadow-lg hover:border-green-200/50 hover:bg-white/95 transition-all duration-300">
                 
                 <!-- Product Image -->
                 <div class="relative aspect-square overflow-hidden bg-gray-100">
@@ -193,7 +208,7 @@ $products = [
                 <!-- Product Info -->
                 <div class="p-5">
                     <div class="mb-3">
-                        <h3 class="font-semibold text-gray-900 mb-1 line-clamp-1 hover:text-lime-600 transition-colors">
+                        <h3 class="font-semibold text-gray-900 mb-1 line-clamp-1 hover:text-green-600 transition-colors">
                             {{ $product['name'] }}
                         </h3>
                         <p class="text-sm text-gray-600 line-clamp-2">{{ $product['description'] }}</p>
@@ -226,7 +241,7 @@ $products = [
 
         <!-- Load More Section -->
         <div class="text-center mt-12">
-            <button class="bg-white/80 backdrop-blur-sm hover:bg-white/90 text-gray-700 font-semibold py-3 px-8 rounded-xl border border-white/30 hover:border-lime-300/50 transition-all duration-300 hover:shadow-md">
+            <button class="bg-white/80 backdrop-blur-sm hover:bg-white/90 text-gray-700 font-semibold py-3 px-8 rounded-xl border border-white/30 hover:border-green-300/50 transition-all duration-300 hover:shadow-md">
                 Load More Products
             </button>
         </div>
@@ -240,7 +255,7 @@ $products = [
                 </svg>
             </div>
             <h3 class="text-xl font-semibold text-gray-900 mb-2">No products found</h3>
-            <p class="text-gray-600">Check back later for authentic Bangladeshi products.</p>
+            <p class="text-gray-600">Check back later for fresh fish and meat products.</p>
         </div>
         @endif
     </div>
@@ -271,26 +286,26 @@ $products = [
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Quality Assured</h3>
-                    <p class="text-gray-600">Every product is carefully selected and quality tested</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Freshness Guaranteed</h3>
+                    <p class="text-gray-600">Every product is fresh daily and quality inspected</p>
                 </div>
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Fast Delivery</h3>
-                    <p class="text-gray-600">Quick and reliable delivery to your doorstep</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Same Day Delivery</h3>
+                    <p class="text-gray-600">Fresh fish and meat delivered within hours</p>
                 </div>
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Made with Love</h3>
-                    <p class="text-gray-600">Authentic flavors prepared with traditional care</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Halal Certified</h3>
+                    <p class="text-gray-600">All meat products are halal certified and hygienic</p>
                 </div>
             </div>
         </div>
