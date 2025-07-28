@@ -44,21 +44,25 @@ Route::get('/A4_foods_dairy', function () {
     return view('A4_foods_dairy');
 });
 
-// Route::get('/babyCare', function () {
-//     return view('babyCare');
-// });
 
 
 
-Route::get('/cloths', function () {
-    return view('cloths');
+
+
+// Rotutes of Fish and meat
+Route::get('/fish&meat', function () {
+    return view('fish&meat');
+});
+Route::get('/C1_Fish&Meat_fish', function () {
+    return view('C1_Fish&Meat_fish');
+});
+Route::get('/C2_Fish&Meat_Meat', function () {
+    return view('C2_Fish&Meat_Meat');
 });
 
 
 
-Route::get('/health', function () {
-    return view('health');
-});
+
 
 Route::get('/homemadeMasala', function () {
     return view('homemadeMasala');
@@ -68,19 +72,20 @@ Route::get('/craftItems', function () {
     return view('craftItems');
 });
 
-Route::get('/fish&meat', function () {
-    return view('fish&meat');
+Route::get('/cloths', function () {
+    return view('cloths');
 });
 
+Route::get('/pickles&condiments', function () {
+    return view('pickles&condiments');
+});
 
 Route::get('/cleaning&household', function () {
     return view('cleaning&household');
 });
 
 
-Route::get('/pickles&condiments', function () {
-    return view('pickles&condiments');
-});
+
 
 Route::get('/organicRoots', function () {
     return view('organicRoots');

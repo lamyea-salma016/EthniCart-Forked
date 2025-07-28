@@ -36,104 +36,88 @@
 
     <!-- Categories Grid -->
     <div class="container mx-auto px-4 py-16">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">Explore Our Categories</h2>
-           
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Explore Our Categories</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Fruits Category -->
+        <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
+            <a href="{{ url('/A1_foods_fruits') }}" class="block">
+                <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-green-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="{{ asset('images/fuits.jpg') }}" alt="Fruits" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-green-600 transition-colors">
+                            Fruits
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Fresh, juicy fruits packed with natural vitamins and flavors
+                        </p>
+                    </div>
+                </div>
+            </a>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Fruits Category -->
-            <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
-                <a href="{{ url('/A1_foods_fruits') }}" class="block">
-                    <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-green-300">
-                        <div class="relative h-64 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
-                            <!-- Placeholder for fruit image -->
-                            <div class="w-32 h-32 bg-green-300 rounded-full flex items-center justify-center">
-                                <span class="text-6xl"></span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-green-600 transition-colors">
-                                Fruits
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-4">
-                                Fresh, juicy fruits packed with natural vitamins and flavors
-                            </p>
-                            
-                        </div>
+        <!-- Sweets Category -->
+        <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
+            <a href="{{ url('/A2_foods_sweets') }}" class="block">
+                <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-pink-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="{{ asset('images/sweets.jpg') }}" alt="Sweets" class="w-full h-full object-cover" />
                     </div>
-                </a>
-            </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-pink-600 transition-colors">
+                            Sweets
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Traditional and modern sweets to satisfy your cravings
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
 
-            <!-- Sweets Category -->
-            <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
-                <a href="{{ url('/A2_foods_sweets') }}" class="block">
-                    <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-pink-300">
-                        <div class="relative h-64 bg-gradient-to-br from-pink-100 to-rose-200 flex items-center justify-center">
-                            <!-- Placeholder for sweets image -->
-                            <div class="w-32 h-32 bg-pink-300 rounded-full flex items-center justify-center">
-                                <span class="text-6xl"></span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-pink-600 transition-colors">
-                                Sweets
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-4">
-                                Traditional and modern sweets to satisfy your cravings
-                            </p>
-                        </div>
+        <!-- Snacks Category -->
+        <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
+            <a href="{{ url('/A3_foods_snacks') }}" class="block">
+                <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-orange-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="{{ asset('images/snacks.jpg') }}" alt="Snacks" class="w-full h-full object-cover" />
                     </div>
-                </a>
-            </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-orange-600 transition-colors">
+                            Snacks
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Crunchy and tasty snacks perfect for any time of day
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
 
-            <!-- Snacks Category -->
-            <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
-                <a href="{{ url('/A3_foods_snacks') }}" class="block">
-                    <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-orange-300">
-                        <div class="relative h-64 bg-gradient-to-br from-orange-100 to-yellow-200 flex items-center justify-center">
-                            <!-- Placeholder for snacks image -->
-                            <div class="w-32 h-32 bg-orange-300 rounded-full flex items-center justify-center">
-                                <span class="text-6xl"></span>
-                            </div>
-                           
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-orange-600 transition-colors">
-                                Snacks
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-4">
-                                Crunchy and tasty snacks perfect for any time of day
-                            </p>
-                        </div>
+        <!-- Dairy Category -->
+        <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
+            <a href="{{ url('/A4_foods_dairy') }}" class="block">
+                <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-blue-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="{{ asset('images/dairy.jpg') }}" alt="Dairy" class="w-full h-full object-cover" />
                     </div>
-                </a>
-            </div>
-
-            <!-- Dairy Category -->
-            <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
-                <a href="{{ url('/A4_foods_dairy') }}" class="block">
-                    <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-blue-300">
-                        <div class="relative h-64 bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center">
-                            <!-- Placeholder for dairy image -->
-                            <div class="w-32 h-32 bg-blue-300 rounded-full flex items-center justify-center">
-                                <span class="text-6xl"></span>
-                            </div>
-                          
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
-                                Dairy
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-4">
-                                Fresh dairy products rich in nutrients and natural goodness
-                            </p>
-                        </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+                            Dairy
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Fresh dairy products rich in nutrients and natural goodness
+                        </p>
                     </div>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
     </div>
+</div>
 
 
     
@@ -174,7 +158,7 @@ $products = [
 ];
 @endphp
 
-<section class="bg-gradient-to-br from-green-100 via-lime-50 to-green-50 min-h-screen py-8">
+<section class="bg-gradient-to-br from-green-200 via-lime-100 to-green-50 min-h-screen py-8">
     <div class="container mx-auto px-4">
         <!-- Header Section -->
         <div class="text-center mb-12">
