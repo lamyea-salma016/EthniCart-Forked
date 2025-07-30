@@ -20,6 +20,18 @@ Route::get('/', function() {
     return view('home');
 })->name('home');
 
+use App\Models\Product;
+
+use Illuminate\Support\Facades\DB;
+
+
+
+Route::get('/', function () {
+    $products = DB::table('products')->get()->toArray();
+    return view('home', compact('products'));
+})->name('home');
+
+
 
 Route::get('/home&kitchen', function () {
     return view('home&kitchen');
@@ -172,3 +184,25 @@ Route::prefix('admin')->name('admin.')->group(function () {
         })->name('dashboard');
     });
 });
+
+
+// seller routes
+use App\Http\Controllers\SellerController;
+
+// Seller Routes
+Route::middleware(['auth'])->group(function () {
+    Route::get('/seller/upload', [SellerController::class, 'showUploadForm']);
+    Route::post('/seller/upload', [SellerController::class, 'uploadProduct']);
+    Route::get('/seller/products', [SellerController::class, 'myProducts']);
+});
+
+//upload product
+Route::middleware(['auth:seller'])->group(function () {
+    Route::get('/seller/upload-product', [ProductController::class, 'create'])->name('seller.product.create');
+    Route::post('/seller/upload-product', [ProductController::class, 'store'])->name('seller.product.store');
+});
+
+//store product on db
+Route::post('/seller/upload-product', [App\Http\Controllers\Seller\ProductController::class, 'store'])->name('seller.product.store');
+
+//display on homepage
