@@ -17,11 +17,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-
-Route::get('/home&kitchen', function () {
-    return view('home&kitchen');
-});
-
 // routes of food section
 
 Route::get('/foods', function () {
@@ -68,9 +63,20 @@ Route::get('/craftItems', function () {
     return view('craftItems');
 });
 
-Route::get('/cloths', function () {
-    return view('cloths');
+Route::get('/home&kitchen', function () {
+    return view('home&kitchen');
 });
+
+
+// Clothing&Apparels routes
+Route::get('/Clothing&Apparels', function () {
+    return view('Clothing&Apparels');
+});
+
+
+
+
+
 
 Route::get('/pickles&condiments', function () {
     return view('pickles&condiments');
