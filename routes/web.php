@@ -45,10 +45,6 @@ Route::get('/A4_foods_dairy', function () {
 });
 
 
-
-
-
-
 // Rotutes of Fish and meat
 Route::get('/fish&meat', function () {
     return view('fish&meat');
@@ -91,9 +87,22 @@ Route::get('/organicRoots', function () {
     return view('organicRoots');
 });
 
+// Beauty&Care route
+
 Route::get('/beauty&care', function () {
     return view('beauty&care');
 });
+
+Route::get('/F1_Beauty&Care_SkinCare', function () {
+    return view('F1_Beauty&Care_SkinCare');
+});
+
+Route::get('/F1_Beauty&Care_SkinCare', function () {
+    return view('F2_Beauty&Care_HairCare');
+});
+
+
+
 
 Route::get('/gift', function () {
     return view('gift');

@@ -46,12 +46,12 @@
         
         <!-- Fish Category -->
         <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
-            <a href="{{ url('/A1_foods_fish') }}" class="block">
+            <a href="{{ url('/C1_Fish&Meat_fish') }}" class="block">
                 <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-green-300 h-[600px]  w-[500px]  flex flex-col">
                     
                     <!-- Larger Image Section -->
                     <div class="relative h-[410px] overflow-hidden">
-                        <img src="{{ asset('images/fish.jpg') }}" alt="Fish" class="w-full h-full object-cover" />
+                        <img src="{{ asset('images/Fish.jpeg') }}" alt="Fish" class="w-full h-full object-cover" />
                     </div>
 
                     <!-- Text Section -->
@@ -70,12 +70,12 @@
 
         <!-- Meat Category -->
         <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
-            <a href="{{ url('/A2_foods_meat') }}" class="block">
+            <a href="{{ url('/C2_Fish&Meat_Meat') }}" class="block">
                 <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-yellow-300 h-[600px]  w-[500px]  flex flex-col">
                     
                     <!-- Larger Image Section -->
                     <div class="relative h-[410px] overflow-hidden">
-                        <img src="{{ asset('images/meat.jpg') }}" alt="Meat" class="w-full h-full object-cover" />
+                        <img src="{{ asset('images/Meat.jpg') }}" alt="Meat" class="w-full h-full object-cover" />
                     </div>
 
                     <!-- Text Section -->
