@@ -556,7 +556,7 @@
 
             {{-- Category 7:Clothing&Apparels  --}}
             <div class="group">
-                <a href="{{url('/cloths')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/Clothing&Apparels')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="{{ asset('images/Cloths&apparels.png') }}" alt="cloths"
                              alt="Dairy" 

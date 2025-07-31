@@ -95,6 +95,15 @@ Route::get('/Clothing&Apparels', function () {
     return view('Clothing&Apparels');
 });
 
+Route::get('/I1_Clothings_WomenWear', function () {
+    return view('I1_Clothings_WomenWear');
+});
+
+Route::get('/I2_Clothings_MenWear', function () {
+    return view('I1_Clothings_MenWear');
+});
+
+
 
 Route::get('/craftItems', function () {
     return view('craftItems');
