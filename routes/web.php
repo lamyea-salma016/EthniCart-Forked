@@ -39,8 +39,13 @@ Route::get('/A4_foods_dairy', function () {
     return view('A4_foods_dairy');
 });
 
+// B Routes of Farm fresh Vegetable
+Route::get('/vegetables', function () {
+    return view('vegetables');
+});
 
-// Rotutes of Fish and meat
+
+// C. Rotutes of Fish and meat
 Route::get('/fish&meat', function () {
     return view('fish&meat');
 });
@@ -51,72 +56,60 @@ Route::get('/C2_Fish&Meat_Meat', function () {
     return view('C2_Fish&Meat_Meat');
 });
 
-
-
-
-
+// D. routes of homamade masala
 Route::get('/homemadeMasala', function () {
     return view('homemadeMasala');
 });
 
-Route::get('/craftItems', function () {
-    return view('craftItems');
-});
 
-Route::get('/home&kitchen', function () {
-    return view('home&kitchen');
-});
-
-
-// Clothing&Apparels routes
-Route::get('/Clothing&Apparels', function () {
-    return view('Clothing&Apparels');
-});
-
-
-
-
-
+// E. Routes of Pickles
 
 Route::get('/pickles&condiments', function () {
     return view('pickles&condiments');
 });
 
-Route::get('/cleaning&household', function () {
-    return view('cleaning&household');
+// F. routes of home and kitchen
+Route::get('/home&kitchen', function () {
+    return view('home&kitchen');
 });
 
-
-
-
+// G. Routes of Organic routes
 Route::get('/organicRoots', function () {
     return view('organicRoots');
 });
 
-// Beauty&Care route
 
+//H.  Beauty&Care route
 Route::get('/beauty&care', function () {
     return view('beauty&care');
 });
-
 Route::get('/F1_Beauty&Care_SkinCare', function () {
     return view('F1_Beauty&Care_SkinCare');
 });
-
 Route::get('/F1_Beauty&Care_SkinCare', function () {
     return view('F2_Beauty&Care_HairCare');
 });
 
+//I. Clothing&Apparels routes
+Route::get('/Clothing&Apparels', function () {
+    return view('Clothing&Apparels');
+});
 
 
+Route::get('/craftItems', function () {
+    return view('craftItems');
+});
+
+
+Route::get('/cleaning&household', function () {
+    return view('cleaning&household');
+});
 
 Route::get('/gift', function () {
     return view('gift');
 });
 
-Route::get('/vegetables', function () {
-    return view('vegetables');
-});
+
 
 Route::get('/meet_theMakers', function () {
     return view('meet_theMakers');
