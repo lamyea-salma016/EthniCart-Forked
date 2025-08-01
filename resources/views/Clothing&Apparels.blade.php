@@ -1,23 +1,23 @@
 @extends('layouts.app')
-@section('title', 'EthniCart | Beauty & Care')
+@section('title', 'EthniCart | Clothing & Apparels')
 <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 @section('content')
 
 <!-- Hero Section -->
-<div class="min-h-screen" style="background: linear-gradient(135deg, #ffffff 0%, #fce7f3 50%, #f3e8ff 100%);">
+<div class="min-h-screen" style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);">
     <!-- Header Banner -->
-    <div class="relative overflow-hidden py-8" style="background: linear-gradient(90deg, #be185d 0%, #ec4899 50%, #be185d 100%);">
+    <div class="relative overflow-hidden py-8" style="background: linear-gradient(90deg, #0369a1 0%, #0284c7 50%, #0369a1 100%);">
         <div class="absolute inset-0 bg-black opacity-10"></div>
         <div class="relative container mx-auto px-4 text-center">
             <h1 class="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">
-                Beauty & Care <span class="text-pink-200"></span>
+                Clothing & Apparels <span class="text-sky-200"></span>
             </h1>
-            <p class="text-xl md:text-2xl text-pink-100 mb-8 max-w-3xl mx-auto">
-                Discover premium skincare and haircare products for your natural beauty routine
+            <p class="text-xl md:text-2xl text-sky-100 mb-8 max-w-3xl mx-auto">
+                Discover premium fashion and clothing for your perfect style statement
             </p>
             <div class="flex justify-center">
                 <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2">
-                    <span class="text-white font-medium">✨ Natural • 🌸 Premium Quality • 💆‍♀️ Professional</span>
+                    <span class="text-white font-medium">✨ Trendy • 👗 Premium Quality • 👔 Professional</span>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
                 <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"/>
             </svg>
         </div>
-        <div class="absolute bottom-5 right-5 opacity-20" style="color: #be185d;">
+        <div class="absolute bottom-5 right-5 opacity-20" style="color: #0369a1;">
             <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"/>
             </svg>
@@ -44,23 +44,23 @@
     <!-- Increased container width -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-7xl px-6">
         
-        <!-- Skin Care Category -->
+        <!-- Women Wear Category -->
         <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
-            <a href="{{ url('/F1_Beauty&Care_SkinCare') }}" class="block">
-                <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-pink-300 h-[600px]  w-[500px]  flex flex-col">
+            <a href="{{ url('I1_Clothings_WomenWear') }}" class="block">
+                <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-sky-300 h-[600px]  w-[500px]  flex flex-col">
                     
                     <!-- Larger Image Section -->
                     <div class="relative h-[410px] overflow-hidden">
-                        <img src="{{ asset('images/SkinCare.jpeg') }}" alt="Skin Care" class="w-full h-full object-cover" />
+                        <img src="{{ asset('images/WomenWear.jpeg') }}" alt="Women Wear" class="w-full h-full object-cover" />
                     </div>
 
                     <!-- Text Section -->
                     <div class="p-8 flex-grow">
-                        <h3 class="text-3xl font-bold text-gray-800 mb-3 group-hover:text-pink-600 transition-colors">
-                            Skin Care
+                        <h3 class="text-3xl font-bold text-gray-800 mb-3 group-hover:text-sky-600 transition-colors">
+                            Women Wear
                         </h3>
                         <p class="text-gray-700 text-base">
-                            Premium skincare products for healthy, glowing and radiant skin
+                            Premium women's clothing collection for elegant and stylish looks
                         </p>
                     </div>
 
@@ -68,23 +68,23 @@
             </a>
         </div>
 
-        <!-- Hair Care Category -->
+        <!-- Men Wear Category -->
         <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
-            <a href="{{ url('/F2_Beauty&Care_HairCare') }}" class="block">
-                <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-rose-300 h-[600px]  w-[500px]  flex flex-col">
+            <a href="{{ url('/I2_Clothings_Menwear') }}" class="block">
+                <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-blue-300 h-[600px]  w-[500px]  flex flex-col">
                     
                     <!-- Larger Image Section -->
                     <div class="relative h-[410px] overflow-hidden">
-                        <img src="{{ asset('images/HairCare.jpg') }}" alt="Hair Care" class="w-full h-full object-cover" />
+                        <img src="{{ asset('images/MenWear.jpg') }}" alt="Men Wear" class="w-full h-full object-cover" />
                     </div>
 
                     <!-- Text Section -->
                     <div class="p-8 flex-grow">
-                        <h3 class="text-3xl font-bold text-gray-800 mb-3 group-hover:text-rose-600 transition-colors">
-                            Hair Care
+                        <h3 class="text-3xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">
+                            Men Wear
                         </h3>
                         <p class="text-gray-700 text-base">
-                            Professional haircare solutions for strong, healthy and beautiful hair
+                            Professional men's clothing solutions for formal and casual wear
                         </p>
                     </div>
 
@@ -106,42 +106,42 @@
 $products = [
     [
         'id' => 1,
-        'name' => 'Vitamin C Face Serum',
-        'description' => 'Brightening serum with natural vitamin C for glowing skin',
-        'price' => '৳1250/bottle',
-        'image' => asset('images/product_images/01_serum.jpeg')
+        'name' => 'Cotton Casual Shirt',
+        'description' => 'Premium cotton shirt for comfortable everyday wear',
+        'price' => '৳1850/piece',
+        'image' => asset('images/product_images/01_shirt.jpeg')
     ],
     [
         'id' => 2,
-        'name' => 'Argan Oil Hair Mask',
-        'description' => 'Deep conditioning mask with pure argan oil',
-        'price' => '৳950/jar',
-        'image' => asset('images/product_images/02_hairmask.jpg')
+        'name' => 'Designer Saree',
+        'description' => 'Elegant designer saree for special occasions',
+        'price' => '৳3200/piece',
+        'image' => asset('images/product_images/02_saree.jpg')
     ],
     [
         'id' => 3,
-        'name' => 'Rose Water Toner',
-        'description' => 'Natural rose water toner for all skin types',
-        'price' => '৳480/bottle',
-        'image' => asset('images/product_images/03_toner.jpeg')
+        'name' => 'Denim Jeans',
+        'description' => 'High-quality denim jeans for casual and trendy look',
+        'price' => '৳2450/piece',
+        'image' => asset('images/product_images/03_jeans.jpeg')
     ],
     [
         'id' => 4,
-        'name' => 'Keratin Hair Shampoo',
-        'description' => 'Protein-rich shampoo for damaged hair repair',
-        'price' => '৳720/bottle',
-        'image' => asset('images/product_images/04_shampoo.jpg')
+        'name' => 'Formal Blazer',
+        'description' => 'Professional blazer for office and formal occasions',
+        'price' => '৳4200/piece',
+        'image' => asset('images/product_images/04_blazer.jpg')
     ],
    
 ];
 @endphp
 
-<section class="min-h-screen py-8" style="background: linear-gradient(135deg, #ffffff 0%, #fce7f3 50%, #fdf2f8 100%);">
+<section class="min-h-screen py-8" style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #f8fafc 100%);">
     <div class="container mx-auto px-4">
         <!-- Header Section -->
         <div class="text-center mb-12">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                <span class="text-pink-600">Beauty</span> & <span class="text-rose-600">Care</span> Section
+                <span class="text-sky-600">Clothing</span> & <span class="text-blue-600">Apparels</span> Section
             </h1>
            
         </div>
@@ -152,13 +152,13 @@ $products = [
                 <div class="flex items-center gap-6">
                     <h2 class="text-xl font-semibold text-gray-900">{{ count($products) }} Products</h2>
                     <div class="hidden sm:flex items-center gap-2 text-sm text-gray-500">
-                        <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
-                        <span>Natural & Premium Quality</span>
+                        <div class="w-2 h-2 bg-sky-500 rounded-full"></div>
+                        <span>Trendy & Premium Quality</span>
                     </div>
                 </div>
                 
                 <div class="flex items-center gap-3">
-                    <select class="px-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 bg-white/90">
+                    <select class="px-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-white/90">
                         <option>Sort by Featured</option>
                         <option>Price: Low to High</option>
                         <option>Price: High to Low</option>
@@ -178,7 +178,7 @@ $products = [
         <!-- Products Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             @foreach($products as $product)
-            <div class="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-sm border border-white/30 overflow-hidden hover:shadow-lg hover:border-pink-200/50 hover:bg-white/95 transition-all duration-300">
+            <div class="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-sm border border-white/30 overflow-hidden hover:shadow-lg hover:border-sky-200/50 hover:bg-white/95 transition-all duration-300">
                 
                 <!-- Product Image -->
                 <div class="relative aspect-square overflow-hidden bg-gray-100">
@@ -208,7 +208,7 @@ $products = [
                 <!-- Product Info -->
                 <div class="p-5">
                     <div class="mb-3">
-                        <h3 class="font-semibold text-gray-900 mb-1 line-clamp-1 hover:text-pink-600 transition-colors">
+                        <h3 class="font-semibold text-gray-900 mb-1 line-clamp-1 hover:text-sky-600 transition-colors">
                             {{ $product['name'] }}
                         </h3>
                         <p class="text-sm text-gray-600 line-clamp-2">{{ $product['description'] }}</p>
@@ -241,7 +241,7 @@ $products = [
 
         <!-- Load More Section -->
         <div class="text-center mt-12">
-            <button class="bg-white/80 backdrop-blur-sm hover:bg-white/90 text-gray-700 font-semibold py-3 px-8 rounded-xl border border-white/30 hover:border-pink-300/50 transition-all duration-300 hover:shadow-md">
+            <button class="bg-white/80 backdrop-blur-sm hover:bg-white/90 text-gray-700 font-semibold py-3 px-8 rounded-xl border border-white/30 hover:border-sky-300/50 transition-all duration-300 hover:shadow-md">
                 Load More Products
             </button>
         </div>
@@ -255,7 +255,7 @@ $products = [
                 </svg>
             </div>
             <h3 class="text-xl font-semibold text-gray-900 mb-2">No products found</h3>
-            <p class="text-gray-600">Check back later for beauty and care products.</p>
+            <p class="text-gray-600">Check back later for clothing and apparel products.</p>
         </div>
         @endif
     </div>
@@ -281,31 +281,31 @@ $products = [
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 bg-sky-500 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Natural Ingredients</h3>
-                    <p class="text-gray-600">Every product contains natural and organic ingredients</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Quality Fabrics</h3>
+                    <p class="text-gray-600">Every garment is made with premium quality fabrics</p>
                 </div>
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Fast Delivery</h3>
-                    <p class="text-gray-600">Beauty products delivered within 24 hours</p>
+                    <p class="text-gray-600">Clothing items delivered within 24 hours</p>
                 </div>
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 bg-sky-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Dermatologist Tested</h3>
-                    <p class="text-gray-600">All products are tested and approved by professionals</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Perfect Fit</h3>
+                    <p class="text-gray-600">All clothing items are designed for perfect fit and comfort</p>
                 </div>
             </div>
         </div>
@@ -315,7 +315,7 @@ $products = [
     <div class="bg-gradient-to-r from-green-600 to-emerald-600 py-4">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-xl font-bold text-white mb-2">Ready to Explore?</h2>
-            <p class="text-green-100 text-lg mb-2">Start your culinary journey with EthniCart today</p>
+            <p class="text-green-100 text-lg mb-2">Start your fashion journey with EthniCart today</p>
             <button class="bg-white text-green-600 px-4 py-2 rounded-full font-bold hover:bg-green-50 transition-colors shadow-lg">
                 Shop Now
             </button>

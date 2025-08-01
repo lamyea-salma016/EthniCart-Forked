@@ -422,19 +422,19 @@
                 </a>
             </div>
 
-            {{-- Category 2: Pickles & Condiments--}}
-            <div class="group">
-                <a href="{{url('/pickles&condiments')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+
+             {{-- Category 12: Farm Fresh Vegetables --}}
+            <div class="babyCare">
+                <a href="{{url('/vegetables')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img 
-                        src="{{ asset('images/pickles.jpg') }}"
-                             alt="Food & Snacks" 
+                        <img  src="{{ asset('images/vegetables.jpg') }}"
+                             alt="Baby Care" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                           Pickles & Condiments
+                            Farm Fresh Vegetables
                         </h3>
                     </div>
                 </a>
@@ -460,6 +460,63 @@
                 </a>
             </div>
 
+
+             {{-- Category 5: Homemade Masala--}}
+            <div class="group">
+                <a href="{{url('/homemadeMasala')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="images/Masala.jpg"
+                             alt="Commodities" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                            Homemade Masala
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+            {{-- Category 2: Pickles & Condiments--}}
+            <div class="group">
+                <a href="{{url('/pickles&condiments')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img 
+                        src="{{ asset('images/pickles.jpg') }}"
+                             alt="Food & Snacks" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                           Pickles & Condiments
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+
+            {{-- Category 9:Home & Kitchen  --}}
+            <div class="group">
+                <a href="{{url('/home&kitchen')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img  src="{{ asset('images/home&kitchen.jpg') }}"
+
+                             alt="Beauty & Personal Care" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                           Home & Kitchen 
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+            
+
             {{-- Category 4: Organic Roots --}}
             <div class="group">
                 <a href="{{url('/organicRoots')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
@@ -478,22 +535,7 @@
                 </a>
             </div>
 
-            {{-- Category 5: Homemade Masala--}}
-            <div class="group">
-                <a href="{{url('/homemadeMasala')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                    <div class="aspect-square relative">
-                        <img src="images/Masala.jpg"
-                             alt="Commodities" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
-                    </div>
-                    <div class="p-3 md:p-4">
-                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Homemade Masala
-                        </h3>
-                    </div>
-                </a>
-            </div>
+           
 
             {{-- Category 6: Beauty & Care --}}
             <div class="group">
@@ -512,18 +554,18 @@
                 </a>
             </div>
 
-            {{-- Category 7: cloths  --}}
+            {{-- Category 7:Clothing&Apparels  --}}
             <div class="group">
-                <a href="{{url('/cloths')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/Clothing&Apparels')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="{{ asset('images/cloths&appreals.jpg') }}" alt="cloths"
+                        <img src="{{ asset('images/Cloths&apparels.png') }}" alt="cloths"
                              alt="Dairy" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Cloths & Apparels
+                            Clothing & Apparels
                         </h3>
                     </div>
                 </a>
@@ -547,23 +589,7 @@
                 </a>
             </div>
 
-            {{-- Category 9:Home & Kitchen  --}}
-            <div class="group">
-                <a href="{{url('/home&kitchen')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                    <div class="aspect-square relative">
-                        <img  src="{{ asset('images/home&kitchen.jpg') }}"
-
-                             alt="Beauty & Personal Care" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
-                    </div>
-                    <div class="p-3 md:p-4">
-                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                           Home & Kitchen 
-                        </h3>
-                    </div>
-                </a>
-            </div>
+            
 
             {{-- Category 10: Flower & Gifts --}}
             <div class="group">
@@ -599,22 +625,7 @@
                 </a>
             </div>
 
-            {{-- Category 12: Farm Fresh Vegetables --}}
-            <div class="babyCare">
-                <a href="{{url('/vegetables')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                    <div class="aspect-square relative">
-                        <img  src="{{ asset('images/vegetables.jpg') }}"
-                             alt="Baby Care" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
-                    </div>
-                    <div class="p-3 md:p-4">
-                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Farm Fresh Vegetables
-                        </h3>
-                    </div>
-                </a>
-            </div>
+           
         </div>
 
         {{-- View All Categories Button (Optional) --}}

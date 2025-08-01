@@ -32,11 +32,6 @@ Route::get('/', function () {
 })->name('home');
 
 
-
-Route::get('/home&kitchen', function () {
-    return view('home&kitchen');
-});
-
 // routes of food section
 
 Route::get('/foods', function () {
@@ -59,32 +54,74 @@ Route::get('/A4_foods_dairy', function () {
     return view('A4_foods_dairy');
 });
 
-// Route::get('/babyCare', function () {
-//     return view('babyCare');
-// });
-
-
-
-Route::get('/cloths', function () {
-    return view('cloths');
+// B Routes of Farm fresh Vegetable
+Route::get('/vegetables', function () {
+    return view('vegetables');
 });
 
 
-
-Route::get('/health', function () {
-    return view('health');
+// C. Rotutes of Fish and meat
+Route::get('/fish&meat', function () {
+    return view('fish&meat');
+});
+Route::get('/C1_Fish&Meat_fish', function () {
+    return view('C1_Fish&Meat_fish');
+});
+Route::get('/C2_Fish&Meat_Meat', function () {
+    return view('C2_Fish&Meat_Meat');
 });
 
+// D. routes of homamade masala
 Route::get('/homemadeMasala', function () {
     return view('homemadeMasala');
 });
 
-Route::get('/craftItems', function () {
-    return view('craftItems');
+
+// E. Routes of Pickles
+
+Route::get('/pickles&condiments', function () {
+    return view('pickles&condiments');
 });
 
-Route::get('/fish&meat', function () {
-    return view('fish&meat');
+// F. routes of home and kitchen
+Route::get('/home&kitchen', function () {
+    return view('home&kitchen');
+});
+
+// G. Routes of Organic routes
+Route::get('/organicRoots', function () {
+    return view('organicRoots');
+});
+
+
+//H.  Beauty&Care route
+Route::get('/beauty&care', function () {
+    return view('beauty&care');
+});
+Route::get('/F1_Beauty&Care_SkinCare', function () {
+    return view('F1_Beauty&Care_SkinCare');
+});
+Route::get('/F1_Beauty&Care_SkinCare', function () {
+    return view('F2_Beauty&Care_HairCare');
+});
+
+//I. Clothing&Apparels routes
+Route::get('/Clothing&Apparels', function () {
+    return view('Clothing&Apparels');
+});
+
+Route::get('/I1_Clothings_WomenWear', function () {
+    return view('I1_Clothings_WomenWear');
+});
+
+Route::get('/I2_Clothings_MenWear', function () {
+    return view('I1_Clothings_MenWear');
+});
+
+
+
+Route::get('/craftItems', function () {
+    return view('craftItems');
 });
 
 
@@ -92,26 +129,11 @@ Route::get('/cleaning&household', function () {
     return view('cleaning&household');
 });
 
-
-Route::get('/pickles&condiments', function () {
-    return view('pickles&condiments');
-});
-
-Route::get('/organicRoots', function () {
-    return view('organicRoots');
-});
-
-Route::get('/beauty&care', function () {
-    return view('beauty&care');
-});
-
 Route::get('/gift', function () {
     return view('gift');
 });
 
-Route::get('/vegetables', function () {
-    return view('vegetables');
-});
+
 
 Route::get('/meet_theMakers', function () {
     return view('meet_theMakers');
