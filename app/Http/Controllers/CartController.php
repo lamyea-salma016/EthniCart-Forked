@@ -32,7 +32,11 @@ class CartController extends Controller
 
         session()->put('cart', $cart);
 
-        return redirect()->back()->with('success', 'Product added to cart!');
+         if ($request->expectsJson()) {
+        return response()->json(['success' => true]);
+    }
+
+    return redirect()->back()->with('success', 'Added to cart!');
     }
 
     public function update(Request $request, $id)

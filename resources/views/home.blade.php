@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
         tailwind.config = {
@@ -767,7 +768,7 @@
         @if (!empty($product->unit)) / {{ $product->unit }} @endif
     </span>
 
-  <form action="{{ route('cart.add', $product->id) }}" method="POST">
+<form class="add-to-cart-form" data-product-id="{{ $product->id }}">
     @csrf
     <button 
         type="submit"
@@ -780,6 +781,7 @@
         {{ (isset($product->stock) && $product->stock == 0) ? 'Sold Out' : 'Add to cart' }}
     </button>
 </form>
+
 
 </div>
 
@@ -1046,6 +1048,43 @@
 
 
 
+<script>
+document.querySelectorAll('.add-to-cart-form').forEach(form => {
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const productId = form.getAttribute('data-product-id');
+        const formData = new FormData(form);
+
+        fetch(`/cart/add/${productId}`, {
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': formData.get('_token'),
+                'Accept': 'application/json',
+            },
+            body: formData
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                Swal.fire({
+                    toast: true,
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Added to cart!',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            } else {
+                Swal.fire('Oops!', data.message || 'Something went wrong!', 'error');
+            }
+        })
+        .catch(() => {
+            Swal.fire('Error', 'Could not add to cart. Please try again.', 'error');
+        });
+    });
+});
+</script>
 
 
 
