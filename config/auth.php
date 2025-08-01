@@ -40,6 +40,12 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        // gurds for sellers
+        'seller' => [
+    'driver' => 'session',
+    'provider' => 'sellers',
+],
+
     ],
 
     /*
@@ -64,6 +70,12 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
+      // provider for sellers
+        'sellers' => [
+    'driver' => 'eloquent',
+    'model' => App\Models\Seller::class,
+],
+
 
         // 'users' => [
         //     'driver' => 'database',
