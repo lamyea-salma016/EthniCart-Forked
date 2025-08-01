@@ -341,7 +341,7 @@
             {{-- Image Slide 4 --}}
             <div class="min-w-full relative">
                 <a href="#" class="block w-full h-full">
-                    <img src="{{ asset('images/slide_5.png') }}"
+                    <img src="{{ asset('images/slide_4.png') }}"
                          alt="Slide 4" 
                          class="w-full h-full object-cover">
                     
@@ -405,36 +405,36 @@
 
         {{-- Categories Grid --}}
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
-            {{-- Category 1: Fruits --}}
+            {{-- Category 1: Foods --}}
             <div class="group">
-                <a href="{{url('/food')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/foods')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="{{ asset('images/foods.png') }}"
-                             alt="Grocery" 
+                             alt="Foods" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Seasonal Fruits
+                            Foods
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 2: Pickles & Condiments--}}
-            <div class="group">
-                <a href="{{url('/pickles&condiments')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+
+             {{-- Category 12: Farm Fresh Vegetables --}}
+            <div class="babyCare">
+                <a href="{{url('/vegetables')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img 
-                        src="{{ asset('images/pickles.jpg') }}"
-                             alt="Food & Snacks" 
+                        <img  src="{{ asset('images/vegetables.jpg') }}"
+                             alt="Baby Care" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                           Pickles & Condiments
+                            Farm Fresh Vegetables
                         </h3>
                     </div>
                 </a>
@@ -460,25 +460,8 @@
                 </a>
             </div>
 
-            {{-- Category 4: Organic Roots --}}
-            <div class="group">
-                <a href="{{url('/organicRoots')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                    <div class="aspect-square relative">
-                        <img 
-                         src="{{ asset('images/organicRoots.png') }}"
-                             alt="Fish & Meat" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
-                    </div>
-                    <div class="p-3 md:p-4">
-                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Organic Roots
-                        </h3>
-                    </div>
-                </a>
-            </div>
 
-            {{-- Category 5: Homemade Masala--}}
+             {{-- Category 5: Homemade Masala--}}
             <div class="group">
                 <a href="{{url('/homemadeMasala')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
@@ -495,11 +478,70 @@
                 </a>
             </div>
 
+            {{-- Category 2: Pickles & Condiments--}}
+            <div class="group">
+                <a href="{{url('/pickles&condiments')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img 
+                        src="{{ asset('images/pickles.jpg') }}"
+                             alt="Food & Snacks" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                           Pickles & Condiments
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+
+            {{-- Category 9:Home & Kitchen  --}}
+            <div class="group">
+                <a href="{{url('/home&kitchen')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img  src="{{ asset('images/home&kitchen.jpg') }}"
+
+                             alt="Beauty & Personal Care" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                           Home & Kitchen 
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+            
+
+            {{-- Category 4: Organic Roots --}}
+            <div class="group">
+                <a href="{{url('/organicRoots')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img 
+                         src="{{ asset('images/organicroots.jpg') }}"
+                             alt="Fish & Meat" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                            Organic Roots
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+           
+
             {{-- Category 6: Beauty & Care --}}
             <div class="group">
                 <a href="{{url('/beauty&care')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="images/beauty_items.png"
+                        <img src="images/beauty&care.jpg"
                              alt="Beauty & Care" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
@@ -512,18 +554,18 @@
                 </a>
             </div>
 
-            {{-- Category 7: cloths  --}}
+            {{-- Category 7:Clothing&Apparels  --}}
             <div class="group">
-                <a href="{{url('/cloths')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/Clothing&Apparels')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="{{ asset('images/cloths&appreals.jpg') }}" alt="cloths"
+                        <img src="{{ asset('images/Cloths&apparels.png') }}" alt="cloths"
                              alt="Dairy" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Cloths & Apparels
+                            Clothing & Apparels
                         </h3>
                     </div>
                 </a>
@@ -547,29 +589,13 @@
                 </a>
             </div>
 
-            {{-- Category 9:Home & Kitchen  --}}
-            <div class="group">
-                <a href="{{url('/home&kitchen')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                    <div class="aspect-square relative">
-                        <img  src="{{ asset('images/home_kitchen.png') }}"
-
-                             alt="Beauty & Personal Care" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
-                    </div>
-                    <div class="p-3 md:p-4">
-                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                           Home & Kitchen 
-                        </h3>
-                    </div>
-                </a>
-            </div>
+            
 
             {{-- Category 10: Flower & Gifts --}}
             <div class="group">
                 <a href="{{url('/gift')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/gifts_flowers.jpg') }}"
+                        <img  src="{{ asset('images/flowerNgifts.jpg') }}"
                              alt="Health & Wellness" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
@@ -599,22 +625,7 @@
                 </a>
             </div>
 
-            {{-- Category 12: Farm Fresh Vegetables --}}
-            <div class="babyCare">
-                <a href="{{url('/vegetables')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                    <div class="aspect-square relative">
-                        <img  src="{{ asset('images/vegetables.jpg') }}"
-                             alt="Baby Care" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
-                    </div>
-                    <div class="p-3 md:p-4">
-                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Farm Fresh Vegetables
-                        </h3>
-                    </div>
-                </a>
-            </div>
+           
         </div>
 
         {{-- View All Categories Button (Optional) --}}
@@ -671,31 +682,123 @@
             </div>
         </div>
 
-        <!-- Products Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+       <!-- Products Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     @foreach($products as $product)
-        <div class="bg-white rounded-lg shadow-md p-4">
+    <div class="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-sm border border-white/30 overflow-hidden hover:shadow-lg hover:border-orange-200/50 hover:bg-white/95 transition-all duration-300">
+        
+        <!-- Product Image -->
+        <div class="relative aspect-square overflow-hidden bg-gray-100">
             @if (!empty($product->image))
-                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-48 object-cover mb-2">
+            <a href="{{ url('/product/' . $product->id) }}">
+                <img src="{{ asset('storage/' . $product->image) }}" 
+                     alt="{{ $product->name }}" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </a>
             @else
-                <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500">No Image</div>
+            <div class="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                <div class="text-center">
+                    <svg class="w-16 h-16 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                    <span class="text-sm text-gray-500">No Image</span>
+                </div>
+            </div>
             @endif
+            
+            <!-- Quick Actions -->
+            <div class="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button class="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-md flex items-center justify-center hover:bg-white transition-colors" title="Quick View">
+                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                    </svg>
+                </button>
+                <button class="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-md flex items-center justify-center hover:bg-red-50 transition-colors group/heart" title="Add to Wishlist">
+                    <svg class="w-5 h-5 text-gray-600 group-hover/heart:text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                    </svg>
+                </button>
+            </div>
 
-            <h3 class="text-lg font-semibold">{{ $product->name }}</h3>
-            <p class="text-gray-600">{{ $product->description }}</p>
-            <p class="text-blue-600 font-bold">Tk {{ $product->price }}</p>
+            <!-- Stock Badge -->
+            @if(isset($product->stock) && $product->stock > 0)
+                @if($product->stock <= 5)
+                <div class="absolute top-4 left-4">
+                    <span class="bg-red-500 text-white text-xs px-2 py-1 rounded-full">Only {{ $product->stock }} left</span>
+                </div>
+                @elseif($product->stock <= 10)
+                <div class="absolute top-4 left-4">
+                    <span class="bg-orange-500 text-white text-xs px-2 py-1 rounded-full">Low Stock</span>
+                </div>
+                @endif
+            @elseif(isset($product->stock) && $product->stock == 0)
+            <div class="absolute top-4 left-4">
+                <span class="bg-gray-500 text-white text-xs px-2 py-1 rounded-full">Out of Stock</span>
+            </div>
+            @endif
         </div>
+
+        <!-- Product Info -->
+        <div class="p-5">
+            <div class="mb-3">
+                <h3 class="font-semibold text-gray-900 mb-1 line-clamp-1 hover:text-orange-600 transition-colors">
+                    {{ $product->name }}
+                </h3>
+                <p class="text-sm text-gray-600 line-clamp-2">{{ $product->description }}</p>
+            </div>
+            
+            <!-- Rating (Static for now) -->
+            <div class="flex items-center gap-1 mb-4">
+                @for($i = 1; $i <= 5; $i++)
+                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+                @endfor
+                <span class="text-xs text-gray-500 ml-1">(4.8)</span>
+            </div>
+            
+            <!-- Price & Add to Cart -->
+            <div class="flex items-center justify-between">
+                <span class="text-xl font-bold text-gray-900">৳{{ number_format($product->price, 2) }}</span>
+                <button class="bg-gradient-to-r from-green-600 to-lime-600 hover:from-green-700 hover:to-lime-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 text-sm group/btn shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed" 
+                        {{ (isset($product->stock) && $product->stock == 0) ? 'disabled' : '' }}>
+                    <svg class="w-4 h-4 group-hover/btn:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.293 2.707A1 1 0 007 17h10a1 1 0 001-1v-1M9 21v-8a1 1 0 011-1h4a1 1 0 011 1v8"/>
+                    </svg>
+                    {{ (isset($product->stock) && $product->stock == 0) ? 'Sold Out' : 'Add' }}
+                </button>
+            </div>
+
+            <!-- Additional Info -->
+            @if(isset($product->category))
+            <div class="mt-3 pt-3 border-t border-gray-100">
+                <span class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">
+                    {{ ucfirst($product->category) }}
+                </span>
+            </div>
+            @endif
+        </div>
+    </div>
     @endforeach
 </div>
 
+<!-- Empty State -->
+@if($products->isEmpty())
+<div class="text-center py-20">
+    <div class="w-32 h-32 bg-white/60 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 border border-white/30">
+        <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/>
+        </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-gray-900 mb-2">No products found</h3>
+    <p class="text-gray-600">Check back later for authentic EthniCart products.</p>
+</div>
+@endif
 
 
-        <!-- Load More Button -->
-        <div class="text-center mt-16">
-            <button class="bg-white hover:bg-gray-50 text-gray-700 font-semibold py-4 px-8 rounded-2xl border-2 border-gray-200 hover:border-[#6A9793] transition-all duration-300 hover:shadow-lg">
-                Load More Products
-            </button>
-        </div>
+
+      
     </div>
 </section>
 
@@ -737,11 +840,11 @@
                             <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clip-rule="evenodd"></path>
                         </svg>
                     </a>
-                    <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-colors duration-300">
+                    <!-- <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-colors duration-300">
                         <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"></path>
                         </svg>
-                    </a>
+                    </a> -->
                     <a href="https://github.com/mehedi-hridoy" target="_blank" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-colors duration-300">
                         <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
@@ -783,7 +886,7 @@
                         </svg>
                         Quality Guarantee
                     </a></li>
-                    <li><a href="#" class="text-gray-300 hover:text-green-400 transition-colors duration-200 flex items-center">
+                    <li><a href="{{url('/contactUs')}}"  class="text-gray-300 hover:text-green-400 transition-colors duration-200 flex items-center">
                         <svg class="w-3 h-3 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                         </svg>
@@ -909,7 +1012,22 @@
 
 
 
+<style>
+/* Line clamp utility classes */
+.line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+</style>
 
 
 
