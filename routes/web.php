@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Product;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,22 +18,43 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('home');
 // });
-Route::get('/', function() {
-    return view('home');
-})->name('home');
-
-use App\Models\Product;
-
-use Illuminate\Support\Facades\DB;
+// Route::get('/', function() {
+//     return view('home');
+// })->name('home');
 
 
 
-Route::get('/', function () {
-    $products = DB::table('products')->get()->toArray();
+
+// Route::get('/', function () {
+//     $products = DB::table('products')->get()->toArray();
+//     return view('home', compact('products'));
+// })->name('home');
+// Route::get('/home', function () {
+//     return view('home');
+// })->name('home');
+
+// Route::get('/', function () {
+//     $products = DB::table('products')
+//         ->where('display_page', 'home') 
+//         ->get();
+
+//     return view('home', compact('products'));
+// });
+
+// Route::get('/', function () {
+//     $products = DB::table('products')
+//         ->where('display_page', 'home')
+//         ->get();
+
+//     return view('home', compact('products'));
+// })->name('home'); // ✅ keep the route name!
+Route::get('/home', function () {
+    $products = DB::table('products')
+        ->where('display_page', 'home')
+        ->get();
+
     return view('home', compact('products'));
 })->name('home');
-
-
 // routes of food section
 
 Route::get('/foods', function () {
@@ -257,6 +280,14 @@ Route::middleware('auth:seller')->group(function () {
 });
 
 // show products on specific page
+Route::get('/', function () {
+    $products = DB::table('products')
+        ->where('display_page', 'home') 
+        ->get();
+
+    return view('home', compact('products'));
+});
+
 Route::get('/vegetables', function () {
     $products = DB::table('products')
         ->where('display_page', 'vegetables')
@@ -265,13 +296,7 @@ Route::get('/vegetables', function () {
     return view('vegetables', compact('products'));
 });
 
-Route::get('/', function () {
-    $products = DB::table('products')
-        ->where('display_page', 'home') 
-        ->get();
 
-    return view('home', compact('products'));
-});
 
 Route::get('/foods', function () {
     $products = Product::where('display_page', 'foods')->get();
@@ -364,3 +389,33 @@ Route::get('/ecoFriendlyProducts', function () {
     $products = Product::where('display_page', 'ecoFriendlyProducts')->get();
     return view('ecoFriendlyProducts', compact('products'));
 });
+
+Route::get('/I1_Clothings_WomenWear', function () {
+    $products = Product::where('display_page', 'I1_Clothings_WomenWear')->get();
+    return view('I1_Clothings_WomenWear', compact('products'));
+});
+
+Route::get('/I2_Clothings_MenWear', function () {
+    $products = Product::where('display_page', 'I2_Clothings_MenWear')->get();
+    return view('I2_Clothings_MenWear', compact('products'));
+});
+
+
+
+
+// product cart routes 
+use App\Http\Controllers\CartController;
+
+Route::middleware('auth')->group(function () {
+    Route::post('/cart/add/{id}', [CartController::class, 'add'])->name('cart.add');
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    Route::post('/cart/update/{id}', [CartController::class, 'update'])->name('cart.update');
+    Route::post('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
+});
+
+
+
+Route::middleware('auth')->group(function () {
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+});
+

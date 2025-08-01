@@ -94,22 +94,27 @@
                 <span class="text-xs text-gray-500 ml-1">(4.8)</span>
             </div>
 
-            <!-- Price & Add to Cart -->
+  <!-- Price & Add to Cart -->
 <div class="flex items-center justify-between">
     <span class="text-xl font-bold text-gray-900">
         ৳{{ number_format($product->price, 2) }} 
         @if (!empty($product->unit)) / {{ $product->unit }} @endif
     </span>
 
-    <button class="bg-gradient-to-r from-green-600 to-lime-600 hover:from-green-700 hover:to-lime-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 text-sm group/btn shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed" 
-        {{ (isset($product->stock) && $product->stock == 0) ? 'disabled' : '' }}>
+<form class="add-to-cart-form" data-product-id="{{ $product->id }}">
+    @csrf
+    <button 
+        type="submit"
+        class="bg-gradient-to-r from-green-600 to-lime-600 hover:from-green-700 hover:to-lime-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 text-sm group/btn shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+        {{ (isset($product->stock) && $product->stock == 0) ? 'disabled' : '' }}
+    >
         <svg class="w-4 h-4 group-hover/btn:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.293 2.707A1 1 0 007 17h10a1 1 0 001-1v-1M9 21v-8a1 1 0 011-1h4a1 1 0 011 1v8"/>
         </svg>
-        {{ (isset($product->stock) && $product->stock == 0) ? 'Sold Out' : 'Add' }}
+        {{ (isset($product->stock) && $product->stock == 0) ? 'Sold Out' : 'Add to cart' }}
     </button>
+</form>
 </div>
-
 
             <!-- Additional Info -->
             @if(isset($product->category))
