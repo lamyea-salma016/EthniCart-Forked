@@ -125,8 +125,8 @@ Route::get('/craftItems', function () {
 });
 
 
-Route::get('/cleaning&household', function () {
-    return view('cleaning&household');
+Route::get('/ecoFriendlyProducts', function () {
+    return view('ecoFriendlyProducts');
 });
 
 Route::get('/gift', function () {
@@ -267,8 +267,100 @@ Route::get('/vegetables', function () {
 
 Route::get('/', function () {
     $products = DB::table('products')
-        ->where('display_page', 'home') // ⬅️ only show homepage-tagged products
+        ->where('display_page', 'home') 
         ->get();
 
     return view('home', compact('products'));
+});
+
+Route::get('/foods', function () {
+    $products = Product::where('display_page', 'foods')->get();
+    return view('foods', compact('products'));
+});
+
+Route::get('/A1_foods_fruits', function () {
+    $products = Product::where('display_page', 'A1_foods_fruits')->get();
+    return view('A1_foods_fruits', compact('products'));
+});
+
+Route::get('/A2_foods_sweets', function () {
+    $products = Product::where('display_page', 'A2_foods_sweets')->get();
+    return view('A2_foods_sweets', compact('products'));
+});
+
+Route::get('/A3_foods_snacks', function () {
+    $products = Product::where('display_page', 'A3_foods_snacks')->get();
+    return view('A3_foods_snacks', compact('products'));
+});
+
+Route::get('/A4_foods_dairy', function () {
+    $products = Product::where('display_page', 'A4_foods_dairy')->get();
+    return view('A4_foods_dairy', compact('products'));
+});
+
+Route::get('/fish&meat', function () {
+    $products = Product::where('display_page', 'fish&meat')->get();
+    return view('fish&meat', compact('products'));
+});
+
+Route::get('/C1_Fish&Meat_fish', function () {
+    $products = Product::where('display_page', 'C1_Fish&Meat_fish')->get();
+    return view('C1_Fish&Meat_fish', compact('products'));
+});
+Route::get('/C2_Fish&Meat_Meat', function () {
+    $products = Product::where('display_page', 'C2_Fish&Meat_Meat')->get();
+    return view('C2_Fish&Meat_Meat', compact('products'));
+});
+
+Route::get('/homemadeMasala', function () {
+    $products = Product::where('display_page', 'homemadeMasala')->get();
+    return view('homemadeMasala', compact('products'));
+});
+
+Route::get('/pickles&condiments', function () {
+    $products = Product::where('display_page', 'pickles&condiments')->get();
+    return view('pickles&condiments', compact('products'));
+});
+Route::get('/home&kitchen', function () {
+    $products = Product::where('display_page', 'home&kitchen')->get();
+    return view('home&kitchen', compact('products'));
+});
+
+Route::get('/organicRoots', function () {
+    $products = Product::where('display_page', 'organicRoots')->get();
+    return view('organicRoots', compact('products'));
+});
+
+Route::get('/beauty&care', function () {
+    $products = Product::where('display_page', 'beauty&care')->get();
+    return view('beauty&care', compact('products'));
+});
+
+
+Route::get('/F1_Beauty&Care_SkinCare', function () {
+    $products = Product::where('display_page', 'F1_Beauty&Care_SkinCare')->get();
+    return view('F1_Beauty&Care_SkinCare', compact('products'));
+});
+Route::get('/F2_Beauty&Care_HairCare', function () {
+    $products = Product::where('display_page', 'F2_Beauty&Care_HairCare')->get();
+    return view('F2_Beauty&Care_HairCare', compact('products'));
+});
+
+
+Route::get('/Clothing&Apparels', function () {
+    $products = Product::where('display_page', 'Clothing&Apparels')->get();
+    return view('Clothing&Apparels', compact('products'));
+});
+Route::get('/craftItems', function () {
+    $products = Product::where('display_page', 'craftItems')->get();
+    return view('craftItems', compact('products'));
+});
+Route::get('/gift', function () {
+    $products = Product::where('display_page', 'gift')->get();
+    return view('gift', compact('products'));
+});
+
+Route::get('/ecoFriendlyProducts', function () {
+    $products = Product::where('display_page', 'ecoFriendlyProducts')->get();
+    return view('ecoFriendlyProducts', compact('products'));
 });

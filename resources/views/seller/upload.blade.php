@@ -138,6 +138,24 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Unit Selection -->
+<div>
+    <label class="block text-sm font-semibold text-gray-700 mb-2">
+        Unit <span class="text-red-500">*</span>
+    </label>
+    <select name="unit" required
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors">
+        <option value="">Select unit</option>
+        <option value="kg">kg</option>
+        <option value="g">g</option>
+        <option value="ltr">ltr</option>
+        <option value="ml">ml</option>
+        <option value="pc">pc</option>
+        <option value="bundle">bundle</option>
+        <!-- Add more units if needed -->
+    </select>
+</div>
+
                                 
                                 <!-- Stock Quantity -->
                                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -158,8 +176,32 @@
                                        <select name="display_page" required
     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors">
     <option value="home">Home</option>
+    <option value="foods">Foods</option>
+    <option value="A1_foods_fruits">Fruits</option>
+    <option value="A2_foods_sweets">Sweets</option>
+    <option value="A3_foods_snacks">Snacks</option>
+    <option value="A4_foods_dairy">Dairy</option>
     <option value="vegetables">Vegetables</option>
+    <option value="fish&meat">Fish&Meat</option>
+
+    <option value="C1_Fish&Meat_fish">Fish</option>
+    <option value="C2_Fish&Meat_Meat">Meat</option>
+    <option value="homemadeMasala">Homemade Masala</option>
+    <option value="pickles&condiments">Pickles & Condiments</option>
+    <option value="home&kitchen">Home & Kitchen</option>
+    <option value="organicRoots">Organic Roots</option>
+    <option value="beauty&care">Beauty & Care</option>
+    <option value="F1_Beauty&Care_SkinCare">Skin Care</option>
+    <option value="F2_Beauty&Care_HairCare">Hair Care</option>
+    <option value="Clothing&Apparels">Clothing & Apparels</option>
+    <option value="I1_Clothings_WomenWear">Womens Wear</option>
+    <option value="I2_Clothings_MenWear">Men Wear</option>
     <option value="craftItems">Craft Items</option>
+
+    <option value="gift">Flower & Gifts</option>
+
+    <option value="ecoFriendlyProducts">Eco Friendly Products</option>
+
     <!-- add more pages -->
 </select>
                                     </div>

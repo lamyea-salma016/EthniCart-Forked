@@ -608,22 +608,24 @@
                 </a>
             </div>
 
-            {{-- Category 11: Eco-Friendly Cleaning Products --}}
+
             <div class="group">
-                <a href="{{url('/cleaning&household')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/ecoFriendlyProducts')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img  src="{{ asset('images/cleaning.jpg') }}"
-                             alt="Cleaning & Household" 
+                             alt="Health & Wellness" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                             Eco-Friendly Cleaning Products
+                              Eco Friendly Products
                         </h3>
                     </div>
                 </a>
             </div>
+
+            
 
            
         </div>
@@ -757,18 +759,23 @@
                 @endfor
                 <span class="text-xs text-gray-500 ml-1">(4.8)</span>
             </div>
-            
+
             <!-- Price & Add to Cart -->
-            <div class="flex items-center justify-between">
-                <span class="text-xl font-bold text-gray-900">৳{{ number_format($product->price, 2) }}</span>
-                <button class="bg-gradient-to-r from-green-600 to-lime-600 hover:from-green-700 hover:to-lime-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 text-sm group/btn shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed" 
-                        {{ (isset($product->stock) && $product->stock == 0) ? 'disabled' : '' }}>
-                    <svg class="w-4 h-4 group-hover/btn:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.293 2.707A1 1 0 007 17h10a1 1 0 001-1v-1M9 21v-8a1 1 0 011-1h4a1 1 0 011 1v8"/>
-                    </svg>
-                    {{ (isset($product->stock) && $product->stock == 0) ? 'Sold Out' : 'Add' }}
-                </button>
-            </div>
+<div class="flex items-center justify-between">
+    <span class="text-xl font-bold text-gray-900">
+        ৳{{ number_format($product->price, 2) }} 
+        @if (!empty($product->unit)) / {{ $product->unit }} @endif
+    </span>
+
+    <button class="bg-gradient-to-r from-green-600 to-lime-600 hover:from-green-700 hover:to-lime-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 text-sm group/btn shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed" 
+        {{ (isset($product->stock) && $product->stock == 0) ? 'disabled' : '' }}>
+        <svg class="w-4 h-4 group-hover/btn:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.293 2.707A1 1 0 007 17h10a1 1 0 001-1v-1M9 21v-8a1 1 0 011-1h4a1 1 0 011 1v8"/>
+        </svg>
+        {{ (isset($product->stock) && $product->stock == 0) ? 'Sold Out' : 'Add' }}
+    </button>
+</div>
+
 
             <!-- Additional Info -->
             @if(isset($product->category))

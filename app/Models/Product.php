@@ -16,7 +16,8 @@ class Product extends Model
         'price',
         'stock',
         'image',
-        'display_page', // ✅ Add this
+        'display_page', 
+        'unit',
     ];
 
     public function seller()
