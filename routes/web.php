@@ -125,8 +125,8 @@ Route::get('/craftItems', function () {
 });
 
 
-Route::get('/cleaning&household', function () {
-    return view('cleaning&household');
+Route::get('/ecoFriendlyProducts', function () {
+    return view('ecoFriendlyProducts');
 });
 
 Route::get('/gift', function () {
@@ -350,4 +350,17 @@ Route::get('/F2_Beauty&Care_HairCare', function () {
 Route::get('/Clothing&Apparels', function () {
     $products = Product::where('display_page', 'Clothing&Apparels')->get();
     return view('Clothing&Apparels', compact('products'));
+});
+Route::get('/craftItems', function () {
+    $products = Product::where('display_page', 'craftItems')->get();
+    return view('craftItems', compact('products'));
+});
+Route::get('/gift', function () {
+    $products = Product::where('display_page', 'gift')->get();
+    return view('gift', compact('products'));
+});
+
+Route::get('/ecoFriendlyProducts', function () {
+    $products = Product::where('display_page', 'ecoFriendlyProducts')->get();
+    return view('ecoFriendlyProducts', compact('products'));
 });
