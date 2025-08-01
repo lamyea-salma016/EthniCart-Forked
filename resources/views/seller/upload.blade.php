@@ -155,13 +155,13 @@
                                         <label class="block text-sm font-semibold text-gray-700 mb-2">
                                             Category
                                         </label>
-                                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors">
-                                            <option value="">Select Category</option>
-                                            <option value="clothing">Clothing</option>
-                                            <option value="accessories">Accessories</option>
-                                            <option value="home-decor">Home Decor</option>
-                                            <option value="jewelry">Jewelry</option>
-                                        </select>
+                                       <select name="display_page" required
+    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors">
+    <option value="home">Home</option>
+    <option value="vegetables">Vegetables</option>
+    <option value="craftItems">Craft Items</option>
+    <!-- add more pages -->
+</select>
                                     </div>
                                 </div>
                                 

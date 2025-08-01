@@ -1,12 +1,11 @@
 <?php
 
-
 namespace App\Http\Controllers\Seller;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Product; // ✅ Make sure this model exists
+use App\Models\Product;
 
 class ProductController extends Controller
 {
@@ -19,18 +18,21 @@ class ProductController extends Controller
     // Handle form submission
     public function store(Request $request)
     {
+        // ✅ Validate ALL inputs including display_page
         $request->validate([
             'name' => 'required|string|max:255',
             'price' => 'required|numeric',
             'stock' => 'required|integer',
             'description' => 'nullable|string',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'display_page' => 'required|string|max:255', // ✅ validate this!
         ]);
 
-        // Upload image to storage/app/public/products
+
+        // ✅ Store image
         $imagePath = $request->file('image')->store('products', 'public');
 
-        // Save to DB using Eloquent
+        // ✅ Create product
         Product::create([
             'seller_id' => Auth::guard('seller')->id(),
             'name' => $request->name,
@@ -38,6 +40,7 @@ class ProductController extends Controller
             'stock' => $request->stock,
             'description' => $request->description,
             'image' => $imagePath,
+            'display_page' => $request->display_page,
         ]);
 
         return redirect()->route('seller.product.create')->with('success', 'Product uploaded successfully!');

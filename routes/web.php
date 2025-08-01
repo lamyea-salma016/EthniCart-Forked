@@ -211,3 +211,20 @@ use App\Http\Controllers\Seller\DashboardController;
 Route::middleware('auth:seller')->group(function () {
     Route::get('/seller/dashboard', [DashboardController::class, 'index'])->name('seller.dashboard');
 });
+
+// show products on specific page
+Route::get('/vegetables', function () {
+    $products = DB::table('products')
+        ->where('display_page', 'vegetables')
+        ->get();
+
+    return view('vegetables', compact('products'));
+});
+
+Route::get('/', function () {
+    $products = DB::table('products')
+        ->where('display_page', 'home') // ⬅️ only show homepage-tagged products
+        ->get();
+
+    return view('home', compact('products'));
+});
