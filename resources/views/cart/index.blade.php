@@ -13,6 +13,19 @@
                     <h1 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">Your Shopping Cart</h1>
                     <p class="text-gray-600 text-sm lg:text-base">Review your items and proceed to checkout</p>
                 </div>
+                @auth
+                <div class="flex items-center gap-3">
+                    <span class="text-sm text-gray-600">Welcome, <strong>{{ Auth::user()->name }}</strong></span>
+                    <form method="POST" action="{{ route('logout') }}" class="inline">
+                        @csrf
+                        <button type="submit" 
+                                class="inline-flex items-center px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm hover:shadow-md">
+                            <i class="fas fa-sign-out-alt mr-2"></i>
+                            Logout
+                        </button>
+                    </form>
+                </div>
+                @endauth
             </div>
         </div>
 
@@ -138,7 +151,7 @@
                             </div>
                             <h3 class="text-xl font-semibold text-gray-900 mb-2">Your cart is empty</h3>
                             <p class="text-gray-600 mb-6">Discover amazing authentic products from EthniCart</p>
-                            <a href="{{ route('home') }}" 
+                            <a href="{{ route('products.index') }}" 
                                class="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors">
                                 <i class="fas fa-leaf mr-2"></i>
                                 Explore Products
