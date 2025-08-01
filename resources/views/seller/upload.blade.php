@@ -181,14 +181,27 @@
     <option value="A2_foods_sweets">Sweets</option>
     <option value="A3_foods_snacks">Snacks</option>
     <option value="A4_foods_dairy">Dairy</option>
-
     <option value="vegetables">Vegetables</option>
     <option value="fish&meat">Fish&Meat</option>
 
     <option value="C1_Fish&Meat_fish">Fish</option>
     <option value="C2_Fish&Meat_Meat">Meat</option>
-
+    <option value="homemadeMasala">Homemade Masala</option>
+    <option value="pickles&condiments">Pickles & Condiments</option>
+    <option value="home&kitchen">Home & Kitchen</option>
+    <option value="organicRoots">Organic Roots</option>
+    <option value="beauty&care">Beauty & Care</option>
+    <option value="F1_Beauty&Care_SkinCare">Skin Care</option>
+    <option value="F2_Beauty&Care_HairCare">Hair Care</option>
+    <option value="Clothing&Apparels">Clothing & Apparels</option>
+    <option value="I1_Clothings_WomenWear">Womens Wear</option>
+    <option value="I2_Clothings_MenWear">Men Wear</option>
     <option value="craftItems">Craft Items</option>
+
+    <option value="gift">Flower & Gifts</option>
+
+    <option value="ecoFriendlyProducts">Eco Friendly Products</option>
+
     <!-- add more pages -->
 </select>
                                     </div>
