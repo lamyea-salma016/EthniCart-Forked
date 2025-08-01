@@ -205,4 +205,9 @@ Route::middleware(['auth:seller'])->group(function () {
 //store product on db
 Route::post('/seller/upload-product', [App\Http\Controllers\Seller\ProductController::class, 'store'])->name('seller.product.store');
 
-//display on homepage
+//seller dashboard
+use App\Http\Controllers\Seller\DashboardController;
+
+Route::middleware('auth:seller')->group(function () {
+    Route::get('/seller/dashboard', [DashboardController::class, 'index'])->name('seller.dashboard');
+});
