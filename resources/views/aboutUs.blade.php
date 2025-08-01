@@ -180,7 +180,7 @@
             <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
                 <div class="relative overflow-hidden h-64 flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50">
                     <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-500">
-                        <img src="{{ asset('images/mehedi.jpg') }}" 
+                        <img src="{{ asset('images/hridoy.png') }}" 
                              class="w-full h-full object-cover" 
                              alt="Mehedi Hasan Hridoy">
                     </div>
