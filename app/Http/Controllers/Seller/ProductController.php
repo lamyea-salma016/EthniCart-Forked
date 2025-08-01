@@ -25,7 +25,8 @@ class ProductController extends Controller
             'stock' => 'required|integer',
             'description' => 'nullable|string',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'display_page' => 'required|string|max:255', // ✅ validate this!
+            'display_page' => 'required|string|max:255', 
+            'unit' => 'required|string|max:10', 
         ]);
 
 
@@ -41,6 +42,7 @@ class ProductController extends Controller
             'description' => $request->description,
             'image' => $imagePath,
             'display_page' => $request->display_page,
+            'unit' => $request->unit, 
         ]);
 
         return redirect()->route('seller.product.create')->with('success', 'Product uploaded successfully!');

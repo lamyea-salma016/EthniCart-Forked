@@ -138,6 +138,24 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Unit Selection -->
+<div>
+    <label class="block text-sm font-semibold text-gray-700 mb-2">
+        Unit <span class="text-red-500">*</span>
+    </label>
+    <select name="unit" required
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors">
+        <option value="">Select unit</option>
+        <option value="kg">kg</option>
+        <option value="g">g</option>
+        <option value="ltr">ltr</option>
+        <option value="ml">ml</option>
+        <option value="pc">pc</option>
+        <option value="bundle">bundle</option>
+        <!-- Add more units if needed -->
+    </select>
+</div>
+
                                 
                                 <!-- Stock Quantity -->
                                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
