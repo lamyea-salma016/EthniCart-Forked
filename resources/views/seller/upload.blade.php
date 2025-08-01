@@ -176,7 +176,18 @@
                                        <select name="display_page" required
     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors">
     <option value="home">Home</option>
+    <option value="foods">Foods</option>
+    <option value="A1_foods_fruits">Fruits</option>
+    <option value="A2_foods_sweets">Sweets</option>
+    <option value="A3_foods_snacks">Snacks</option>
+    <option value="A4_foods_dairy">Dairy</option>
+
     <option value="vegetables">Vegetables</option>
+    <option value="fish&meat">Fish&Meat</option>
+
+    <option value="C1_Fish&Meat_fish">Fish</option>
+    <option value="C2_Fish&Meat_Meat">Meat</option>
+
     <option value="craftItems">Craft Items</option>
     <!-- add more pages -->
 </select>

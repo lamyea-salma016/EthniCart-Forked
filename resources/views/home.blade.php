@@ -757,6 +757,7 @@
                 @endfor
                 <span class="text-xs text-gray-500 ml-1">(4.8)</span>
             </div>
+
             <!-- Price & Add to Cart -->
 <div class="flex items-center justify-between">
     <span class="text-xl font-bold text-gray-900">
