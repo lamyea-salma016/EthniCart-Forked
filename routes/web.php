@@ -390,6 +390,17 @@ Route::get('/ecoFriendlyProducts', function () {
     return view('ecoFriendlyProducts', compact('products'));
 });
 
+Route::get('/I1_Clothings_WomenWear', function () {
+    $products = Product::where('display_page', 'I1_Clothings_WomenWear')->get();
+    return view('I1_Clothings_WomenWear', compact('products'));
+});
+
+Route::get('/I2_Clothings_MenWear', function () {
+    $products = Product::where('display_page', 'I2_Clothings_MenWear')->get();
+    return view('I2_Clothings_MenWear', compact('products'));
+});
+
+
 
 
 // product cart routes 

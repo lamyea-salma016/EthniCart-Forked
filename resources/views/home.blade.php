@@ -88,7 +88,7 @@
                             <i class="fa-solid fa-magnifying-glass text-xl"></i>
                         </button>
                         
-                        <a href="/cart" class="relative text-gray-700 hover:text-primary transition-colors">
+                        <a href="{{url('/cart')}}" class="relative text-gray-700 hover:text-primary transition-colors">
                             <i class="fa-solid fa-basket-shopping text-xl md:text-2xl" style="color: #90c552;"></i>
        
                             <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
@@ -781,8 +781,6 @@
         {{ (isset($product->stock) && $product->stock == 0) ? 'Sold Out' : 'Add to cart' }}
     </button>
 </form>
-
-
 </div>
 
 
