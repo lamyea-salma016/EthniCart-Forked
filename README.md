@@ -1,66 +1,137 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🛍️ EthniCart
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**EthniCart** is a Laravel-based e-commerce web application designed to promote and sell traditional and ethnic products. It features a clean, simple, and functional layout for managing users, sellers, and items rooted in cultural heritage. Ideal for supporting local artisans and promoting ethnic diversity.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Installation & Setup Guide
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Follow the steps below to run EthniCart on your local development environment.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 1. Clone the Repository
 
-## Learning Laravel
+```bash
+git clone https://github.com/mehedi-hridoy/EthniCart.git
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 2. Navigate into the Project Directory
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```bash
+cd EthniCart
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 3. Open the Project in Your Code Editor
 
-## Laravel Sponsors
+If you use **VS Code**, run:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```bash
+code .
+```
 
-### Premium Partners
+Or open it manually in any IDE you use.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### 4. Start XAMPP Server
 
-## Contributing
+- Open **XAMPP**.
+- Start both **Apache** and **MySQL** modules.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 5. Install Dependencies Using Composer
 
-## Code of Conduct
+```bash
+composer update
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 6. Copy the `.env` File
 
-## Security Vulnerabilities
+```bash
+cp .env.example .env
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 7. Configure Your Environment Variables
 
-## License
+Open the `.env` file and update the following lines:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+> Replace `your_database_name` with the name of your MySQL database.
+
+---
+
+### 8. Set Admin Credentials
+
+Add the following to your `.env` file:
+
+```env
+ADMIN_USERNAME=your_username
+ADMIN_PASSWORD_HASH=your_hashed_password
+```
+
+To generate the hashed password:
+
+- Visit: https://bcrypt.online/
+- Enter your desired password.
+- Copy the hashed output and paste it as `ADMIN_PASSWORD_HASH`.
+
+---
+
+### 9. Generate the Application Key
+
+```bash
+php artisan key:generate
+```
+
+### 10. Run Database Migrations
+
+```bash
+php artisan migrate
+```
+
+### 11. Create Storage Symlink
+
+```bash
+php artisan storage:link
+```
+
+### 12. Start the Development Server
+
+```bash
+php artisan serve
+```
+
+---
+
+Now, visit your local server in a browser:
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+## 🎯 Features
+
+- Admin login with hashed credentials
+- Product and seller management
+- Laravel MVC architecture
+- Clean user interface
+- Secure environment-based settings
+
+---
+
+## 🙋‍♂️ Author
+
+Developed by [Mehedi Hasan Hridoy](https://github.com/mehedi-hridoy)
+Developed by [Umme Salma Lamyea](https://github.com/lamyea-salma016)
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
