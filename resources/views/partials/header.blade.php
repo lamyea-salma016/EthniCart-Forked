@@ -1,6 +1,6 @@
 <div class="bg-blue-50">
-    <nav class="sticky top-0 z-50">
-        <!-- Main Navigation -->
+    <!-- Main Navigation - Fixed on desktop/tablet, always visible -->
+    <nav class="md:fixed md:top-0 md:left-0 md:right-0 z-50">
         <div class="bg-white shadow-md">
             <div class="container mx-auto px-4 lg:px-6">
                 <div class="flex justify-between items-center h-16 md:h-20">
@@ -86,8 +86,8 @@
     </nav>
 </div>
 
-<!-- Bottom Navigation -->
-<nav class="bg-white shadow-sm border-b">
+<!-- Bottom Navigation - This will scroll normally, with top padding on desktop to account for fixed nav -->
+<nav class="bg-white shadow-sm border-b md:mt-20 lg:mt-24">
     <div class="max-w-7xl mx-auto pl-0 pr-4 sm:pr-6 lg:pr-8">
         <div class="flex justify-between items-center h-16">
             <!-- Shop by Category Button -->
