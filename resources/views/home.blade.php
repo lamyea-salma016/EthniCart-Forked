@@ -267,7 +267,7 @@
                     <a href="{{url('/fromTheSource')}}" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">From the Source</a>
                     <a href="{{url('/ethniPromise')}}" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Ethni Promise</a>
                     <a href="{{url('/stories')}}" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Stories</a>
-                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Join as Seller</a>
+                    <a href="{{url('/join_as_seller')}}"  class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Join as Seller</a>
                     <a href="{{url('/aboutUs')}}"    class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">About Us</a>
                 </div>
         </div>
@@ -1001,7 +1001,7 @@
                 © {{ date('Y') }} EthniCart. All rights reserved. | Bringing authentic products from earth to you.
             </p>
             <div class="flex space-x-6">
-                <a href="#" class="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Privacy Policy</a>
+                <a href="{{url('/privacy_policy')}}" class="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Privacy Policy</a>
                 <a href="#" class="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Terms of Service</a>
                 <a href="#" class="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Shipping Policy</a>
                 <a href="#" class="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Return Policy</a>
