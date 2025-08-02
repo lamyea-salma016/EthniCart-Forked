@@ -189,6 +189,9 @@ Route::get('/join_as_seller', function () {
 Route::get('/privacy_policy', function () {
     return view('privacy_policy');
 });
+Route::get('/terms_of_service', function () {
+    return view('terms_of_service');
+});
 
 Route::get('/accounts/account', function () {
     return view('accounts.account');
