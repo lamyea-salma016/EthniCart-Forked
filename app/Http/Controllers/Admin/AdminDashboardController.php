@@ -30,4 +30,34 @@ class AdminDashboardController extends Controller
         Seller::destroy($id);
         return redirect()->route('admin.dashboard')->with('success', 'Seller deleted successfully.');
     }
+
+
+    // block unblock 
+    public function toggleUserBlock($id)
+{
+    $user = User::findOrFail($id);
+    $user->is_blocked = !$user->is_blocked;
+    $user->save();
+
+    return redirect()->route('admin.dashboard')->with('success', 'User block status changed.');
+}
+
+public function toggleSellerBlock($id)
+{
+    $seller = Seller::findOrFail($id);
+    $seller->is_blocked = !$seller->is_blocked;
+    $seller->save();
+
+    return redirect()->route('admin.dashboard')->with('success', 'Seller block status changed.');
+}
+
+public function showSellerProfile($id)
+{
+    $seller = Seller::findOrFail($id);
+    $products = $seller->products()->latest()->take(5)->get();
+    $totalProducts = $seller->products()->count();
+
+    return view('admin.seller_profile', compact('seller', 'products', 'totalProducts'));
+}
+
 }
