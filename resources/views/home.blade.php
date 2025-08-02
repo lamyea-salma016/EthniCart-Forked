@@ -35,10 +35,8 @@
 
 
 <div class="bg-blue-50">
-
-
-    <nav class="sticky top-0 z-50">
-        <!-- Main Navigation -->
+    <!-- Main Navigation - Fixed on desktop/tablet, always visible -->
+    <nav class="md:fixed md:top-0 md:left-0 md:right-0 z-50">
         <div class="bg-white shadow-md">
             <div class="container mx-auto px-4 lg:px-6">
                 <div class="flex justify-between items-center h-16 md:h-20">
@@ -48,21 +46,19 @@
                             <i class="fa-solid fa-bars text-xl"></i>
                         </button>
                         
-                        <button class="hidden md:block text-gray-700 hover:text-primary transition-colors">
-                            <!-- <i class="fa-solid fa-bars text-2xl"></i> -->
-                        </button>
-<a href="/" class="relative flex items-center py-2 lg:left-[-100px] md:left-[-80px] sm:left-[-60px] left-[-40px]">
+                        <!-- <button class="hidden md:block text-gray-700 hover:text-primary transition-colors">
+                            <i class="fa-solid fa-bars text-2xl"></i>
+                        </button> -->
+                        
+                       <a href="/" class="relative flex items-center py-2 lg:left-[-100px] md:left-[-80px] sm:left-[-60px] left-[-40px]">
     <img class="h-auto max-h-16 w-auto object-contain" src="{{ asset('images/site_logo.png') }}" alt="EthniCart Logo" />
 </a>
 
-
-
-
                     </div>
 
-                    <!-- Search Bar  -->
+                    <!-- Search Bar -->
                     <div class="hidden md:flex flex-1 max-w-2xl mx-8">
-                        <form method="GET" class="w-full">
+                        <form method="GET" action="{{ url('/search') }}" class="w-full">
                             <div class="search-container flex items-center bg-white rounded-lg overflow-hidden border border-gray-200 transition-all duration-200">
                                 <input
                                     type="text"
@@ -88,13 +84,11 @@
                             <i class="fa-solid fa-magnifying-glass text-xl"></i>
                         </button>
                         
-                        <a href="{{url('/cart')}}" class="relative text-gray-700 hover:text-primary transition-colors">
+                        <a href="{{ url('/cart') }}" class="relative text-gray-700 hover:text-primary transition-colors">
                             <i class="fa-solid fa-basket-shopping text-xl md:text-2xl" style="color: #90c552;"></i>
-       
                             <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
                         </a>
                         
-                       <!--Account login section -->
                         <a href="/accounts/account" class="text-gray-700 hover:text-primary transition-colors">
                             <i class="fa-solid fa-user text-xl md:text-2xl"></i>
                         </a>
@@ -105,7 +99,7 @@
 
         <!-- Mobile Search Bar -->
         <div class="md:hidden bg-white border-t border-gray-200 px-4 py-3">
-            <form method="GET" class="w-full">
+            <form method="GET" action="{{ url('/search') }}" class="w-full">
                 <div class="search-container flex items-center bg-gray-50 rounded-lg overflow-hidden border border-gray-200 transition-all duration-200">
                     <input
                         type="text"
@@ -126,27 +120,23 @@
             </form>
         </div>
     </nav>
-
 </div>
 
-<!--bottom nav design -->
-
- <nav class="bg-white shadow-sm border-b">
-        <div class="max-w-7xl mx-auto pl-0 pr-4 sm:pr-6 lg:pr-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Shop by Category Button -->
-                <div class="relative -ml-4 sm:-ml-6 md:-ml-10 lg:-ml-24 xl:-ml-36">
-
-
-                    <button id="categoryBtn" class="flex items-center space-x-2 text-gray-700 hover:text-gray-900 py-2 rounded-md text-sm font-medium">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                        <span>SHOP BY CATEGORY</span>
-                    </button>
-                    
-                    <!-- Dropdown Menu -->
-                    <div id="categoryDropdown" class="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg z-50 border border-gray-200 hidden">
+<!-- Bottom Navigation - This will scroll normally, with top padding on desktop to account for fixed nav -->
+<nav class="bg-white shadow-sm border-b md:mt-20 lg:mt-24">
+    <div class="max-w-7xl mx-auto pl-0 pr-4 sm:pr-6 lg:pr-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Shop by Category Button -->
+            <div class="relative -ml-4 sm:-ml-6 md:-ml-10 lg:-ml-24 xl:-ml-36">
+                <button id="categoryBtn" class="flex items-center space-x-2 text-gray-700 hover:text-gray-900 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <span>SHOP BY CATEGORY</span>
+                </button>
+                
+                <!-- Dropdown Menu -->
+                <div id="categoryDropdown" class="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg z-50 border border-gray-200 hidden">
                         <div class="py-2">
                             <a href="{{url('/food')}}" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
                                 <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -268,10 +258,10 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Other navigation items -->
-                <div class="hidden md:flex space-x-8">
+            </div>
+            
+            <!-- Other navigation items -->
+             <div class="hidden md:flex space-x-8">
                     <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">GREAT DEALS</a>
                     <a href="{{url('/meet_theMakers')}}"    class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Meet the Makers</a>
                     <a href="{{url('/fromTheSource')}}" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">From the Source</a>
@@ -280,11 +270,9 @@
                     <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Join as Seller</a>
                     <a href="{{url('/aboutUs')}}"    class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">About Us</a>
                 </div>
-            </div>
         </div>
-    </nav>
-
-
+    </div>
+</nav>
 
 
 
