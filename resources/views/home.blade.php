@@ -1002,7 +1002,7 @@
             </p>
             <div class="flex space-x-6">
                 <a href="{{url('/privacy_policy')}}" class="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Privacy Policy</a>
-                <a href="#" class="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Terms of Service</a>
+                <a href="{{url('/terms_of_service')}}" class="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Terms of Service</a>
                 <a href="#" class="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Shipping Policy</a>
                 <a href="#" class="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Return Policy</a>
             </div>
