@@ -11,7 +11,7 @@
     <div class="relative max-w-7xl mx-auto px-4 text-center">
         <div class="inline-block mb-6">
             <div class="bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 border border-white/30">
-                <span class="text-white font-medium">📜 আমাদের নিয়ম • Our Terms</span>
+                <span class="text-white font-medium">• Our Terms</span>
             </div>
         </div>
         
