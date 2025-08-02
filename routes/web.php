@@ -183,6 +183,10 @@ Route::get('/stories', function () {
     return view('stories');
 });
 
+Route::get('/join_as_seller', function () {
+    return view('join_as_seller');
+});
+
 Route::get('/accounts/account', function () {
     return view('accounts.account');
 });
