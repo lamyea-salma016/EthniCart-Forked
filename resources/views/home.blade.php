@@ -1001,7 +1001,7 @@
                 © {{ date('Y') }} EthniCart. All rights reserved. | Bringing authentic products from earth to you.
             </p>
             <div class="flex space-x-6">
-                <a href="#" class="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Privacy Policy</a>
+                <a href="{{url('/privacy_policy')}}" class="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Privacy Policy</a>
                 <a href="#" class="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Terms of Service</a>
                 <a href="#" class="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Shipping Policy</a>
                 <a href="#" class="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Return Policy</a>
