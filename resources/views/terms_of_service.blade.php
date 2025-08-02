@@ -293,33 +293,7 @@
             </div>
         </div>
 
-        <!-- Contact Section -->
-        <div class="bg-gradient-to-r from-emerald-600 to-green-600 rounded-3xl p-8 text-white text-center mt-16">
-            <h3 class="text-3xl font-bold mb-6">Questions About Our Terms?</h3>
-            <p class="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-                We're here to help! Contact our customer service team for any questions about these terms or your EthniCart experience.
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                    <div class="text-3xl mb-4">📧</div>
-                    <h4 class="text-lg font-bold mb-2">Email Support</h4>
-                    <p class="text-white/90 text-sm">support@ethnicart.com</p>
-                </div>
-                
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                    <div class="text-3xl mb-4">📞</div>
-                    <h4 class="text-lg font-bold mb-2">Phone Support</h4>
-                    <p class="text-white/90 text-sm">+880 1XXX-XXXXXX</p>
-                </div>
-                
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                    <div class="text-3xl mb-4">💬</div>
-                    <h4 class="text-lg font-bold mb-2">Live Chat</h4>
-                    <p class="text-white/90 text-sm">Available 9 AM - 9 PM</p>
-                </div>
-            </div>
-        </div>
+      
     </div>
 </section>
 @endsection
