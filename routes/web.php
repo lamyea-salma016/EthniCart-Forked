@@ -434,3 +434,24 @@ Route::post('/admin/logout', function () {
     session()->forget('is_admin');
     return redirect('/admin/login');
 })->name('admin.logout');
+
+
+Route::prefix('admin')->middleware('admin')->group(function () {
+    Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
+
+    Route::delete('/user/{id}', [AdminDashboardController::class, 'deleteUser'])->name('admin.deleteUser');
+    Route::delete('/seller/{id}', [AdminDashboardController::class, 'deleteSeller'])->name('admin.deleteSeller');
+
+    Route::post('/user/block/{id}', [AdminDashboardController::class, 'toggleUserBlock'])->name('admin.toggleUserBlock');
+    Route::post('/seller/block/{id}', [AdminDashboardController::class, 'toggleSellerBlock'])->name('admin.toggleSellerBlock');
+
+    Route::get('/seller/profile/{id}', [AdminDashboardController::class, 'showSellerProfile'])->name('admin.sellerProfile');
+});
+
+
+
+// Block a user
+Route::post('/admin/users/{id}/block', [AdminDashboardController::class, 'blockUser'])->name('admin.block.user');
+
+// Unblock a user
+Route::post('/admin/users/{id}/unblock', [AdminDashboardController::class, 'unblockUser'])->name('admin.unblock.user');
