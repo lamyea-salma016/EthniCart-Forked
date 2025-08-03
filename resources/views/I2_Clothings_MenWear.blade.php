@@ -12,9 +12,6 @@
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
                Men's<span class="text-green-600">Wear</span> Collection
             </h1>
-            <p class="text-base text-gray-600 max-w-2xl mx-auto">
-                Discover our curated selection of beautiful handcrafted furniture and decor
-            </p>
         </div>
 
        
