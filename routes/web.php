@@ -465,3 +465,10 @@ Route::post('/admin/users/{id}/block', [AdminDashboardController::class, 'blockU
 
 // Unblock a user
 Route::post('/admin/users/{id}/unblock', [AdminDashboardController::class, 'unblockUser'])->name('admin.unblock.user');
+
+
+
+// seller update
+// Add these routes inside the seller middleware group
+Route::post('/products/update-stock', [ProductController::class, 'updateStock'])->name('seller.product.updateStock');
+Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('seller.product.destroy');
