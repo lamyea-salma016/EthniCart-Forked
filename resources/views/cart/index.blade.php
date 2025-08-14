@@ -1,8 +1,6 @@
 @extends('layouts.app')
-
 @section('title', 'EthniCart | Your Cart')
 <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
-
 @section('content')
 <div class="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 min-h-screen">
     <div class="container mx-auto px-4 py-6 lg:py-8 max-w-7xl">
@@ -28,7 +26,21 @@
                 @endauth
             </div>
         </div>
-
+        
+        @php
+            // Get user-specific cart
+            $cartKey = auth()->check() ? 'cart_' . auth()->id() : 'cart_' . session()->getId();
+            $cart = session()->get($cartKey, []);
+            
+            // Calculate total quantity
+            $totalQuantity = 0;
+            if($cart) {
+                foreach($cart as $item) {
+                    $totalQuantity += $item['quantity'];
+                }
+            }
+        @endphp
+        
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
             <!-- Cart Items Section -->
             <div class="lg:col-span-2">
@@ -42,30 +54,19 @@
                                 </div>
                                 <div>
                                     <h2 class="text-xl font-bold">Cart Items</h2>
-                                    <p class="text-green-100 text-sm">{{ count(session('cart', [])) }} items in your cart</p>
+                                    <p class="text-green-100 text-sm">{{ count($cart) }} items in your cart</p>
                                 </div>
                             </div>
                             <div class="text-right">
                                 <p class="text-sm text-green-100">Total Items</p>
-                                <p class="text-2xl font-bold">
-                                    @php
-                                        $totalQuantity = 0;
-                                        if(session('cart')) {
-                                            foreach(session('cart') as $item) {
-                                                $totalQuantity += $item['quantity'];
-                                            }
-                                        }
-                                    @endphp
-                                    {{ $totalQuantity }}
-                                </p>
+                                <p class="text-2xl font-bold">{{ $totalQuantity }}</p>
                             </div>
                         </div>
                     </div>
-
                     <!-- Cart Items -->
                     <div class="divide-y divide-gray-100">
-                        @if(session('cart') && count(session('cart')) > 0)
-                            @foreach(session('cart') as $id => $item)
+                        @if($cart && count($cart) > 0)
+                            @foreach($cart as $id => $item)
                             <div class="p-4 lg:p-6 hover:bg-green-50/50 transition-colors group">
                                 <div class="flex flex-col sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-4">
                                     <!-- Product Image -->
@@ -83,7 +84,6 @@
                                             @endif
                                         </div>
                                     </div>
-
                                     <!-- Product Details -->
                                     <div class="flex-1 min-w-0 text-center sm:text-left">
                                         <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ $item['name'] }}</h3>
@@ -116,7 +116,6 @@
                                                     Update
                                                 </button>
                                             </form>
-
                                             <!-- Price and Remove -->
                                             <div class="flex items-center justify-between sm:justify-end space-x-4">
                                                 <div class="text-center sm:text-right">
@@ -151,7 +150,7 @@
                             </div>
                             <h3 class="text-xl font-semibold text-gray-900 mb-2">Your cart is empty</h3>
                             <p class="text-gray-600 mb-6">Discover amazing authentic products from EthniCart</p>
-                            <a href="{{ route('products.index') }}" 
+                            <a href="{{ route('home') }}" 
                                class="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors">
                                 <i class="fas fa-leaf mr-2"></i>
                                 Explore Products
@@ -161,7 +160,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Order Summary Sidebar -->
             <div class="lg:col-span-1">
                 <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-sm border border-green-100 overflow-hidden sticky top-8">
@@ -172,7 +170,6 @@
                             Order Summary
                         </h3>
                     </div>
-
                     <div class="p-4 lg:p-6 space-y-4">
                         <!-- User Details -->
                         <div class="bg-green-50 border border-green-200 rounded-xl p-4">
@@ -185,20 +182,18 @@
                                 <p class="text-gray-700"><strong>Email:</strong> {{ Auth::user()->email ?? 'guest@example.com' }}</p>
                             </div>
                         </div>
-
-                        @if(session('cart') && count(session('cart')) > 0)
+                        @if($cart && count($cart) > 0)
                         <!-- Price Breakdown -->
                         <div class="space-y-3">
                             @php
                                 $subtotal = 0;
-                                foreach(session('cart') as $item) {
+                                foreach($cart as $item) {
                                     $subtotal += $item['price'] * $item['quantity'];
                                 }
                                 $shipping = $subtotal > 1000 ? 0 : 60; // Free shipping over ৳1000
                                 $tax = $subtotal * 0.05; // 5% tax
                                 $total = $subtotal + $shipping + $tax;
                             @endphp
-
                             <div class="flex justify-between text-gray-600 text-sm lg:text-base">
                                 <span>Subtotal ({{ $totalQuantity }} items)</span>
                                 <span>৳{{ number_format($subtotal, 2) }}</span>
@@ -225,22 +220,18 @@
                             </div>
                             @endif
                         </div>
-
                         <hr class="border-green-200">
-
                         <!-- Total -->
                         <div class="flex justify-between items-center text-lg font-bold text-gray-900">
                             <span>Total</span>
                             <span class="text-green-600">৳{{ number_format($total, 2) }}</span>
                         </div>
-
                         <!-- Checkout Button -->
                         <a href="{{ route('home') }}" 
                            class="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-3 lg:py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
                             <i class="fas fa-lock mr-2"></i>
                             Proceed to Checkout
                         </a>
-
                         <p class="text-xs text-gray-500 text-center mt-2">
                             <i class="fas fa-shield-alt mr-1"></i>
                             Secure checkout with 256-bit SSL encryption
@@ -248,7 +239,6 @@
                         @endif
                     </div>
                 </div>
-
                 <!-- Continue Shopping -->
                 <div class="mt-4 lg:mt-6">
                     <a href="{{ route('home') }}" 
@@ -261,14 +251,12 @@
         </div>
     </div>
 </div>
-
 <script>
     // Quantity increment/decrement functions
     function incrementQuantity(itemId) {
         const input = document.getElementById(`quantity-${itemId}`);
         input.value = parseInt(input.value) + 1;
     }
-
     function decrementQuantity(itemId) {
         const input = document.getElementById(`quantity-${itemId}`);
         if (parseInt(input.value) > 1) {
