@@ -75,7 +75,7 @@
                     
                     <!-- Larger Image Section -->
                     <div class="relative h-[410px] overflow-hidden">
-                        <img src="{{ asset('images/mens_wear.jpg') }}" alt="Men Wear" class="w-full h-full object-cover" />
+                        <img src="{{ asset('images/men_wear.png') }}" alt="Men Wear" class="w-full h-full object-cover" />
                     </div>
 
                     <!-- Text Section -->
