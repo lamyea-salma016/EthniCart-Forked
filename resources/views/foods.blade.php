@@ -132,7 +132,7 @@
     <div class="container mx-auto px-4 py-8">
         <div class="text-center mb-8">
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-                Food<span class="text-4xl font-bold text-green-600">-Items</span> 
+                All<span class="text-4xl font-bold text-green-600"> Food</span> Items
             </h1>
         </div>
 
