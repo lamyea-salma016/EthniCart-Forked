@@ -6,97 +6,17 @@
                 <div class="flex justify-between items-center h-16 md:h-20">
                     
                     <div class="flex items-center space-x-3 md:space-x-4">
-                        <button class="md:hidden text-gray-700 hover:text-primary transition-colors">
+                        <!-- <button class="md:hidden text-gray-700 hover:text-primary transition-colors">
                             <i class="fa-solid fa-bars text-xl"></i>
-                        </button>
-                        
-                        <!-- <button class="hidden md:block text-gray-700 hover:text-primary transition-colors">
-                            <i class="fa-solid fa-bars text-2xl"></i>
                         </button> -->
-                        
-                       <a href="/" class="relative flex items-center py-2 lg:left-[-100px] md:left-[-80px] sm:left-[-60px] left-[-40px]">
-    <img class="h-auto max-h-16 w-auto object-contain" src="{{ asset('images/site_logo.png') }}" alt="EthniCart Logo" />
-</a>
 
-                    </div>
-
-                    <!-- Search Bar -->
-                    <div class="hidden md:flex flex-1 max-w-2xl mx-8">
-                        <form method="GET" action="{{ url('/search') }}" class="w-full">
-                            <div class="search-container flex items-center bg-white rounded-lg overflow-hidden border border-gray-200 transition-all duration-200">
-                                <input
-                                    type="text"
-                                    name="query"
-                                    placeholder="Search your products"
-                                    class="flex-grow px-4 lg:px-6 py-3 text-sm lg:text-base text-gray-700 focus:outline-none bg-transparent min-w-0"
-                                >
-                                <button
-                                    type="submit"
-                                    class="px-4 lg:px-6 py-3 transition-all duration-200 flex items-center justify-center flex-shrink-0 hover:opacity-90"
-                                    style="background-color: #90c552;"
-                                >
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="flex items-center space-x-4 md:space-x-6">
-                        <button class="md:hidden text-gray-700 hover:text-primary transition-colors">
-                            <i class="fa-solid fa-magnifying-glass text-xl"></i>
-                        </button>
-                        
-                        <a href="{{ url('/cart') }}" class="relative text-gray-700 hover:text-primary transition-colors">
-                            <i class="fa-solid fa-basket-shopping text-xl md:text-2xl" style="color: #90c552;"></i>
-                            <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
-                        </a>
-                        
-                        <a href="/accounts/account" class="text-gray-700 hover:text-primary transition-colors">
-                            <i class="fa-solid fa-user text-xl md:text-2xl"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Search Bar -->
-        <div class="md:hidden bg-white border-t border-gray-200 px-4 py-3">
-            <form method="GET" action="{{ url('/search') }}" class="w-full">
-                <div class="search-container flex items-center bg-gray-50 rounded-lg overflow-hidden border border-gray-200 transition-all duration-200">
-                    <input
-                        type="text"
-                        name="query"
-                        placeholder="Search your products"
-                        class="flex-grow px-4 py-3 text-sm text-gray-700 focus:outline-none bg-transparent min-w-0"
-                    >
-                    <button
-                        type="submit"
-                        class="px-4 py-3 transition-all duration-200 flex items-center justify-center flex-shrink-0 hover:opacity-90"
-                        style="background-color: #90c552;"
-                    >
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </nav>
-</div>
-
-<!-- Bottom Navigation - This will scroll normally, with top padding on desktop to account for fixed nav -->
-<nav class="bg-white shadow-sm border-b md:mt-20 lg:mt-24">
-    <div class="max-w-7xl mx-auto pl-0 pr-4 sm:pr-6 lg:pr-8">
-        <div class="flex justify-between items-center h-16">
-            <!-- Shop by Category Button -->
+                                    <!-- Shop by Category Button -->
             <div class="relative -ml-4 sm:-ml-6 md:-ml-10 lg:-ml-24 xl:-ml-36">
                 <button id="categoryBtn" class="flex items-center space-x-2 text-gray-700 hover:text-gray-900 py-2 rounded-md text-sm font-medium transition-colors duration-200">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
-                    <span>SHOP BY CATEGORY</span>
+                    <!-- <span>SHOP BY CATEGORY</span> -->
                 </button>
                 
                 <!-- Dropdown Menu -->
@@ -223,10 +143,70 @@
                         </div>
                     </div>
             </div>
+                        
+                        <!-- <button class="hidden md:block text-gray-700 hover:text-primary transition-colors">
+                            <i class="fa-solid fa-bars text-2xl"></i>
+                        </button> -->
+                        
+                       <a href="/" class=" flex items-center py-2 lg:left-[-100px] md:left-[-80px] sm:left-[-60px] left-[-40px]">
+    <img class="h-auto max-h-16 w-auto object-contain" src="{{ asset('images/site_logo.png') }}" alt="EthniCart Logo" />
+</a>
+
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="hidden md:flex flex-1 max-w-2xl mx-8">
+                        <form method="GET" action="{{ url('/search') }}" class="w-full">
+                            <div class="search-container flex items-center bg-white rounded-lg overflow-hidden border border-gray-200 transition-all duration-200">
+                                <input
+                                    type="text"
+                                    name="query"
+                                    placeholder="Search your products"
+                                    class="flex-grow px-4 lg:px-6 py-3 text-sm lg:text-base text-gray-700 focus:outline-none bg-transparent min-w-0"
+                                >
+                                <button
+                                    type="submit"
+                                    class="px-4 lg:px-6 py-3 transition-all duration-200 flex items-center justify-center flex-shrink-0 hover:opacity-90"
+                                    style="background-color: #90c552;"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="flex items-center space-x-4 md:space-x-6">
+                        <button class="md:hidden text-gray-700 hover:text-primary transition-colors">
+                            <i class="fa-solid fa-magnifying-glass text-xl"></i>
+                        </button>
+                        
+                        <a href="{{ url('/cart') }}" class="relative text-gray-700 hover:text-primary transition-colors">
+                            <i class="fa-solid fa-basket-shopping text-xl md:text-2xl" style="color: #90c552;"></i>
+                            <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                        </a>
+                        
+                        <a href="/accounts/account" class="text-gray-700 hover:text-primary transition-colors">
+                            <i class="fa-solid fa-user text-xl md:text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </nav>
+</div>
+
+<!-- Bottom Navigation - This will scroll normally, with top padding on desktop to account for fixed nav -->
+<nav class="bg-white shadow-sm border-b md:mt-20 lg:mt-24">
+    <div class="max-w-7xl mx-auto pl-0 pr-4 sm:pr-6 lg:pr-8">
+        <div class="flex justify-center items-center h-16">
+
             
             <!-- Other navigation items -->
              <div class="hidden md:flex space-x-8">
-                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">GREAT DEALS</a>
                     <a href="{{url('/meet_theMakers')}}"    class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Meet the Makers</a>
                     <a href="{{url('/fromTheSource')}}" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">From the Source</a>
                     <a href="{{url('/ethniPromise')}}" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Ethni Promise</a>
