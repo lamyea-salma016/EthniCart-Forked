@@ -227,11 +227,13 @@
                             <span class="text-green-600">৳{{ number_format($total, 2) }}</span>
                         </div>
                         <!-- Checkout Button -->
-                        <a href="{{ route('home') }}" 
-                           class="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-3 lg:py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                            <i class="fas fa-lock mr-2"></i>
-                            Proceed to Checkout
-                        </a>
+                       <!-- Checkout Button -->
+<a href="{{ url('/checkout') }}" 
+   class="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-3 lg:py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
+    <i class="fas fa-lock mr-2"></i>
+    Proceed to Checkout
+</a>
+
                         <p class="text-xs text-gray-500 text-center mt-2">
                             <i class="fas fa-shield-alt mr-1"></i>
                             Secure checkout with 256-bit SSL encryption

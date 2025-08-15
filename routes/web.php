@@ -472,3 +472,22 @@ Route::post('/admin/users/{id}/unblock', [AdminDashboardController::class, 'unbl
 // Add these routes inside the seller middleware group
 Route::post('/products/update-stock', [ProductController::class, 'updateStock'])->name('seller.product.updateStock');
 Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('seller.product.destroy');
+
+
+
+// SSLCOMMERZ Start
+
+
+use App\Http\Controllers\SslCommerzPaymentController;
+Route::get('/checkout', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
+Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
+
+Route::post('/pay', [SslCommerzPaymentController::class, 'index']);
+Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
+
+Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+
+Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
+//SSLCOMMERZ END
