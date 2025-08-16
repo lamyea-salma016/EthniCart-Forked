@@ -84,7 +84,7 @@
             <a href="{{ url('/A3_foods_snacks') }}" class="block">
                 <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-orange-300">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="{{ asset('images/snacks.jpg') }}" alt="Snacks" class="w-full h-full object-cover" />
+                        <img src="{{ asset('images/snackss.jpg') }}" alt="Snacks" class="w-full h-full object-cover" />
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-orange-600 transition-colors">
