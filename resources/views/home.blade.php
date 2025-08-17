@@ -580,7 +580,7 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                              Eco Friendly Products
+                              Eco Friendly Cleaning Products
                         </h3>
                     </div>
                 </a>
