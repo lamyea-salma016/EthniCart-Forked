@@ -10,7 +10,7 @@
     <div class="container mx-auto px-4 py-8">
         <div class="text-center mb-8">
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-               Authentic<span class="text-green-600">Crafted Items </span> Collection
+               Authentic<span class="text-green-600"> Crafted  </span> Collection
             </h1>
             
         </div>
