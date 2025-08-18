@@ -51,7 +51,7 @@
                     
                     <!-- Larger Image Section -->
                     <div class="relative h-[410px] overflow-hidden">
-                        <img src="{{ asset('images/skinCare.jpg') }}" alt="Skin Care" class="w-full h-full object-cover" />
+                        <img src="{{ asset('images/SkinCare.jpg') }}" alt="Skin Care" class="w-full h-full object-cover" />
                     </div>
 
                     <!-- Text Section -->
@@ -75,7 +75,7 @@
                     
                     <!-- Larger Image Section -->
                     <div class="relative h-[410px] overflow-hidden">
-                        <img src="{{ asset('images/hairCare.jpg') }}" alt="Hair Care" class="w-full h-full object-cover" />
+                        <img src="{{ asset('images/HairCare.jpeg') }}" alt="Hair Care" class="w-full h-full object-cover" />
                     </div>
 
                     <!-- Text Section -->
@@ -109,11 +109,9 @@
     <div class="container mx-auto px-4 py-8">
         <div class="text-center mb-8">
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-                Ethni<span class="text-[#6A9793]">Cart</span> Collection
+                  Hair &<span class=" text-green-600"> Skin Care</span> Products
             </h1>
-            <p class="text-base text-gray-600 max-w-2xl mx-auto">
-                Discover our curated selection of beautiful handcrafted furniture and decor
-            </p>
+            
         </div>
 
         <!-- Filters and Controls -->
