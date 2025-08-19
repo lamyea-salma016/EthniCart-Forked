@@ -332,84 +332,129 @@
             </div>
 
             <!-- Sellers Section -->
-            <div class="bg-white shadow-sm rounded-lg border border-gray-200 mb-8" id="sellers">
-                <div class="px-4 py-5 sm:px-6 border-b border-gray-200">
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                        <div class="flex items-center mb-4 sm:mb-0">
-                            <div class="w-8 h-8 bg-indigo-500 rounded-lg flex items-center justify-center mr-3">
-                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V4a2 2 0 012 2v6l-3.894 4.894a1 1 0 01-1.428 0L16 12V6z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">Seller Management</h3>
-                        </div>
-                        <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
-                            <input type="text" placeholder="Search sellers..." class="px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-sm">
-                            <button class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors duration-200 text-sm font-medium">
-                                Search
-                            </button>
-                        </div>
-                    </div>
+            <!-- Sellers Section -->
+<div class="bg-white shadow-sm rounded-lg border border-gray-200 mb-8" id="sellers">
+    <!-- Header -->
+    <div class="px-4 py-5 sm:px-6 border-b border-gray-200">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+            <div class="flex items-center mb-4 sm:mb-0">
+                <div class="w-8 h-8 bg-indigo-500 rounded-lg flex items-center justify-center mr-3">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                              d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 
+                                 2 0 00-2-2v2m8 0V4a2 2 0 012 2v6l-3.894 4.894a1 1 0 01-1.428 0L16 12V6z"></path>
+                    </svg>
                 </div>
-                
-                <div class="overflow-x-auto">
-                    <table class="min-w-full divide-y divide-gray-200">
-                        <thead class="bg-gray-50">
-                            <tr>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Seller</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody class="bg-white divide-y divide-gray-200">
-                            @foreach ($sellers as $seller)
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="flex items-center">
-                                        <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
-                                            <span class="text-sm font-medium text-indigo-600">{{ substr($seller->name, 0, 1) }}</span>
-                                        </div>
-                                        <div class="ml-4">
-                                            <div class="text-sm font-medium text-gray-900">{{ $seller->name }}</div>
-                                            <div class="text-sm text-gray-500">Verified Vendor</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm text-gray-900">{{ $seller->email }}</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="inline-flex px-2 py-1 text-xs font-medium rounded-full {{ $seller->is_blocked ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800' }}">
-                                        {{ $seller->is_blocked ? 'Blocked' : 'Active' }}
-                                    </span>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                    <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
-                                        <form action="{{ route('admin.toggleSellerBlock', $seller->id) }}" method="POST" style="display:inline;">
-                                            @csrf
-                                            <button type="submit" class="{{ $seller->is_blocked ? 'text-green-600 hover:text-green-900' : 'text-yellow-600 hover:text-yellow-900' }} text-sm">
-                                                {{ $seller->is_blocked ? 'Unblock' : 'Block' }}
-                                            </button>
-                                        </form>
-                                        <a href="{{ route('admin.sellerProfile', $seller->id) }}" class="text-blue-600 hover:text-blue-900 text-sm">
-                                            View Profile
-                                        </a>
-                                        <form action="{{ route('admin.deleteSeller', $seller->id) }}" method="POST" style="display:inline;">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="text-red-600 hover:text-red-900 text-sm">
-                                                Delete
-                                            </button>
-                                        </form>
-                                    </div>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
+                <h3 class="text-lg leading-6 font-medium text-gray-900">Seller Management</h3>
             </div>
+            <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+                <input type="text" placeholder="Search sellers..." 
+                       class="px-3 py-2 border border-gray-300 rounded-md shadow-sm 
+                              focus:ring-indigo-500 focus:border-indigo-500 text-sm">
+                <button class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 
+                               transition-colors duration-200 text-sm font-medium">
+                    Search
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <div class="overflow-x-auto">
+        <table class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-gray-50">
+                <tr>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Seller</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+                    <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                    <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+                {{-- Pending Sellers --}}
+                @foreach ($pendingSellers as $seller)
+                <tr class="hover:bg-gray-50">
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
+                                <span class="text-sm font-medium text-indigo-600">{{ substr($seller->name, 0, 1) }}</span>
+                            </div>
+                            <div class="ml-4">
+                                <div class="text-sm font-medium text-gray-900">{{ $seller->name }}</div>
+                                <div class="text-xs text-yellow-600">Pending Approval</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4 text-sm text-gray-900">{{ $seller->email }}</td>
+                    <td class="px-6 py-4 text-center">
+                        <span class="px-2 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800">
+                            Pending
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 text-center text-sm font-medium">
+
+
+    <a href="{{ route('admin.sellers.approve', $seller->id) }}" 
+       class="px-3 py-1 bg-green-500 text-white rounded-lg hover:bg-green-600">Approve</a>
+
+    <a href="{{ route('admin.sellers.delete', $seller->id) }}" 
+       class="px-3 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600">Delete</a>
+</td>
+
+                </tr>
+                @endforeach
+
+                {{-- Approved Sellers --}}
+                @foreach ($approvedSellers as $seller)
+                <tr class="hover:bg-gray-50">
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="text-sm font-medium text-green-600">{{ substr($seller->name, 0, 1) }}</span>
+                            </div>
+                            <div class="ml-4">
+                                <div class="text-sm font-medium text-gray-900">{{ $seller->name }}</div>
+                                <div class="text-xs text-gray-500">Approved Vendor</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4 text-sm text-gray-900">{{ $seller->email }}</td>
+                    <td class="px-6 py-4 text-center">
+                        <span class="inline-flex px-2 py-1 text-xs font-medium rounded-full {{ $seller->is_blocked ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800' }}">
+                            {{ $seller->is_blocked ? 'Blocked' : 'Active' }}
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 text-center text-sm font-medium">
+                        <div class="flex flex-col sm:flex-row sm:justify-center sm:space-x-2 space-y-2 sm:space-y-0">
+                            <form action="{{ route('admin.sellers.toggleBlock', $seller->id) }}" method="POST">
+                                @csrf
+                                <button type="submit" 
+                                        class="{{ $seller->is_blocked ? 'text-green-600 hover:text-green-900' : 'text-yellow-600 hover:text-yellow-900' }}">
+                                    {{ $seller->is_blocked ? 'Unblock' : 'Block' }}
+                                </button>
+                            </form>
+                            <a href="{{ route('admin.sellerProfile', $seller->id) }}" class="text-blue-600 hover:text-blue-900">
+                                View Profile
+                            </a>
+                            <a href="{{ route('admin.sellers.disapprove', $seller->id) }}" class="text-yellow-600 hover:text-yellow-900">
+                                Disapprove
+                            </a>
+                            <form action="{{ route('admin.sellers.delete', $seller->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="text-red-600 hover:text-red-900">
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
+
 
             <!-- Analytics Section -->
             <div class="bg-white shadow-sm rounded-lg border border-gray-200 mb-8" id="analytics">
@@ -446,6 +491,10 @@
             </div>
         </main>
     </div>
+
+
+
+
 
     <script>
         // Mobile menu functionality

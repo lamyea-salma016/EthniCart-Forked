@@ -491,3 +491,30 @@ Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 
 Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 //SSLCOMMERZ END
+
+
+//admin approval 
+
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+
+    // User management
+    Route::get('/users/{id}/delete', [AdminDashboardController::class, 'deleteUser'])->name('users.delete');
+    Route::get('/users/{id}/toggle-block', [AdminDashboardController::class, 'toggleUserBlock'])->name('users.toggleBlock');
+
+    // Seller management
+    Route::get('/sellers/{id}/delete', [AdminDashboardController::class, 'deleteSeller'])->name('sellers.delete');
+    Route::get('/sellers/{id}/toggle-block', [AdminDashboardController::class, 'toggleSellerBlock'])->name('sellers.toggleBlock');
+    Route::get('/sellers/{id}/approve', [AdminDashboardController::class, 'approveSeller'])->name('sellers.approve');
+    Route::get('/sellers/{id}/disapprove', [AdminDashboardController::class, 'disapproveSeller'])->name('sellers.disapprove');
+    Route::get('/sellers/{id}/profile', [AdminDashboardController::class, 'showSellerProfile'])->name('sellers.profile');
+
+
+});
+
+//pdf generation
+
+
+Route::post('/cod', [CartController::class, 'cashOnDelivery'])->name('cart.cod');
+

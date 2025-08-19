@@ -17,21 +17,46 @@
             Access your dashboard, manage your products & track sales
         </p>
 
+        {{-- Flash/Error Messages --}}
+        @if(session('status'))
+            <div class="mb-4 p-3 rounded-lg text-white {{ session('status_type') == 'success' ? 'bg-green-600' : 'bg-red-600' }}">
+                {{ session('status') }}
+            </div>
+        @endif
+
+        @if($errors->any())
+            <div class="mb-4 p-3 bg-red-100 text-red-700 rounded-lg">
+                <ul class="list-disc list-inside text-sm">
+                    @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <form method="POST" action="{{ route('seller.login') }}" class="space-y-6">
             @csrf
 
             <div>
                 <label for="email" class="block text-sm font-medium text-green-700 mb-1">Email Address</label>
-                <input type="email" id="email" name="email" required
-                    class="w-full px-4 py-3 rounded-xl border border-green-300 focus:ring-2 focus:ring-green-500 focus:outline-none placeholder:text-green-400"
+                <input type="email" id="email" name="email" value="{{ old('email') }}" required
+                    class="w-full px-4 py-3 rounded-xl border border-green-300 focus:ring-2 focus:ring-green-500 focus:outline-none placeholder:text-green-400
+                           @error('email') border-red-500 ring-red-300 @enderror"
                     placeholder="seller@example.com" />
+                @error('email')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
             </div>
 
             <div>
                 <label for="password" class="block text-sm font-medium text-green-700 mb-1">Password</label>
                 <input type="password" id="password" name="password" required
-                    class="w-full px-4 py-3 rounded-xl border border-green-300 focus:ring-2 focus:ring-green-500 focus:outline-none placeholder:text-green-400"
+                    class="w-full px-4 py-3 rounded-xl border border-green-300 focus:ring-2 focus:ring-green-500 focus:outline-none placeholder:text-green-400
+                           @error('password') border-red-500 ring-red-300 @enderror"
                     placeholder="Your secure password" />
+                @error('password')
+                    <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                @enderror
             </div>
 
             <button type="submit"

@@ -11,13 +11,17 @@ use Illuminate\Http\Request;
 class AdminDashboardController extends Controller
 {
     public function index()
-    {
-        $users = User::all();
-        $sellers = Seller::all();
-        $products = Product::all(); // assuming product model tracks sales etc. later
+{
+    $users = User::all();
+    $sellers = Seller::all();
+    $products = Product::all();
 
-        return view('admin.dashboard', compact('users', 'sellers', 'products'));
-    }
+    $pendingSellers = Seller::where('is_approved', false)->get();
+    $approvedSellers = Seller::where('is_approved', true)->get();
+
+    return view('admin.dashboard', compact('users', 'sellers', 'products', 'pendingSellers', 'approvedSellers'));
+}
+
 
     public function deleteUser($id)
     {
@@ -42,6 +46,7 @@ class AdminDashboardController extends Controller
     return redirect()->route('admin.dashboard')->with('success', 'User block status changed.');
 }
 
+
 public function toggleSellerBlock($id)
 {
     $seller = Seller::findOrFail($id);
@@ -59,5 +64,26 @@ public function showSellerProfile($id)
 
     return view('admin.seller_profile', compact('seller', 'products', 'totalProducts'));
 }
+
+
+public function approveSeller($id)
+{
+    $seller = Seller::findOrFail($id);
+    $seller->is_approved = true;
+    $seller->save();
+
+    return redirect()->route('admin.dashboard')->with('success', 'Seller approved successfully.');
+}
+
+public function disapproveSeller($id)
+{
+    $seller = Seller::findOrFail($id);
+    $seller->is_approved = false;
+    $seller->save();
+
+    return redirect()->route('admin.dashboard')->with('success', 'Seller disapproved successfully.');
+}
+
+
 
 }

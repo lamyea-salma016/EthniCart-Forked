@@ -234,6 +234,16 @@
     Proceed to Checkout
 </a>
 
+<!-- Cash on Delivery Button -->
+<form action="{{ route('cart.cod') }}" method="POST" id="codForm">
+    @csrf
+    <button type="submit" 
+            class="w-full mt-3 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 lg:py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center">
+        <i class="fas fa-money-bill-wave mr-2"></i>
+        Pay on Delivery
+    </button>
+</form>
+
                         <p class="text-xs text-gray-500 text-center mt-2">
                             <i class="fas fa-shield-alt mr-1"></i>
                             Secure checkout with 256-bit SSL encryption
