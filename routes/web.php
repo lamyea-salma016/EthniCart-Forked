@@ -509,4 +509,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/sellers/{id}/approve', [AdminDashboardController::class, 'approveSeller'])->name('sellers.approve');
     Route::get('/sellers/{id}/disapprove', [AdminDashboardController::class, 'disapproveSeller'])->name('sellers.disapprove');
     Route::get('/sellers/{id}/profile', [AdminDashboardController::class, 'showSellerProfile'])->name('sellers.profile');
+
+
 });
+
+

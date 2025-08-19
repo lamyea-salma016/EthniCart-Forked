@@ -46,6 +46,7 @@ class AdminDashboardController extends Controller
     return redirect()->route('admin.dashboard')->with('success', 'User block status changed.');
 }
 
+
 public function toggleSellerBlock($id)
 {
     $seller = Seller::findOrFail($id);

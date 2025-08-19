@@ -392,11 +392,15 @@
                         </span>
                     </td>
                     <td class="px-6 py-4 text-center text-sm font-medium">
-                        <a href="{{ route('admin.sellers.approve', $seller->id) }}" 
-                           class="px-3 py-1 bg-green-500 text-white rounded-lg hover:bg-green-600">Approve</a>
-                        <a href="{{ route('admin.sellers.delete', $seller->id) }}" 
-                           class="px-3 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600">Delete</a>
-                    </td>
+
+
+    <a href="{{ route('admin.sellers.approve', $seller->id) }}" 
+       class="px-3 py-1 bg-green-500 text-white rounded-lg hover:bg-green-600">Approve</a>
+
+    <a href="{{ route('admin.sellers.delete', $seller->id) }}" 
+       class="px-3 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600">Delete</a>
+</td>
+
                 </tr>
                 @endforeach
 

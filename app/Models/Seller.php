@@ -11,7 +11,24 @@ class Seller extends Authenticatable
 {
     use Notifiable;
 
-    protected $fillable = ['name', 'email', 'password','is_approved'];
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'is_approved',
+        'phone',
+        'seller_image',
+        'nid',
+        'nid_file',
+        'production_area',
+        'business_type',
+        'product_description',
+        'proof_file',
+        'bank_account',
+        'bank_name',
+        'mobile_wallet',
+    ];
+
 
     protected $hidden = ['password', 'remember_token'];
 
