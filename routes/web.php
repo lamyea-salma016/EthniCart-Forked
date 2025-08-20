@@ -525,3 +525,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
 Route::post('/cart/cod', [CartController::class, 'codOrder'])->name('cart.cod');
 
 
+// routes/web.php
+use App\Http\Controllers\SellerStatController;
+
+Route::get('/seller/stats', [SellerStatController::class, 'index'])
+    ->middleware('auth')
+    ->name('seller.stats');
