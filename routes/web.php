@@ -516,5 +516,12 @@ Route::prefix('admin')->name('admin.')->group(function () {
 //pdf generation
 
 
-Route::post('/cod', [CartController::class, 'cashOnDelivery'])->name('cart.cod');
+// Route::post('/cod', [CartController::class, 'cashOnDelivery'])->name('cart.cod');
+
+
+// // cod
+// Route::post('/cart/cod', [CartController::class, 'codOrder'])->name('cart.cod');
+
+Route::post('/cart/cod', [CartController::class, 'codOrder'])->name('cart.cod');
+
 
