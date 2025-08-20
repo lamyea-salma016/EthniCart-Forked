@@ -18,31 +18,32 @@ class CartController extends Controller
         $cart = session()->get($this->getCartKey(), []);
         return view('cart.index', compact('cart'));
     }
-    
     public function add(Request $request, $id)
-    {
-        $product = Product::findOrFail($id);
-        $cart = session()->get($this->getCartKey(), []);
-        
-        if (isset($cart[$id])) {
-            $cart[$id]['quantity']++;
-        } else {
-            $cart[$id] = [
-                "name" => $product->name,
-                "price" => $product->price,
-                "image" => $product->image,
-                "quantity" => 1
-            ];
-        }
-        
-        session()->put($this->getCartKey(), $cart);
-        
-        if ($request->expectsJson()) {
-            return response()->json(['success' => true]);
-        }
-        
-        return redirect()->back()->with('success', 'Added to cart!');
+{
+    $product = Product::findOrFail($id);
+    $cart = session()->get($this->getCartKey(), []);
+    
+    if (isset($cart[$id])) {
+        $cart[$id]['quantity']++;
+    } else {
+        $cart[$id] = [
+            "name" => $product->name,
+            "price" => $product->price,
+            "image" => $product->image,
+            "quantity" => 1,
+            "seller_id" => $product->seller_id, // ✅ add seller_id
+        ];
     }
+    
+    session()->put($this->getCartKey(), $cart);
+    
+    if ($request->expectsJson()) {
+        return response()->json(['success' => true]);
+    }
+    
+    return redirect()->back()->with('success', 'Added to cart!');
+}
+
     
     public function update(Request $request, $id)
     {
@@ -69,29 +70,37 @@ class CartController extends Controller
     }
     
     // Transfer guest cart to user cart (call this after login)
-    public function transferGuestCartToUser()
-    {
-        if (!Auth::check()) {
-            return;
-        }
-        
-        $guestCartKey = 'cart_' . Session::getId();
-        $userCartKey = 'cart_' . Auth::id();
-        
-        $guestCart = session()->get($guestCartKey, []);
-        $userCart = session()->get($userCartKey, []);
-        
-        if (!empty($guestCart)) {
-            foreach ($guestCart as $id => $item) {
-                if (isset($userCart[$id])) {
-                    $userCart[$id]['quantity'] += $item['quantity'];
-                } else {
-                    $userCart[$id] = $item;
-                }
-            }
-            
-            session()->put($userCartKey, $userCart);
-            session()->forget($guestCartKey);
-        }
+   // Transfer guest cart to user cart (call this after login)
+public function transferGuestCartToUser()
+{
+    if (!Auth::check()) {
+        return;
     }
+
+    $guestCartKey = 'cart_' . Session::getId();
+    $userCartKey  = 'cart_' . Auth::id();
+
+    $guestCart = session()->get($guestCartKey, []);
+    $userCart  = session()->get($userCartKey, []);
+
+    if (!empty($guestCart)) {
+        foreach ($guestCart as $id => $item) {
+            // ✅ Ensure seller_id is always present
+            if (!isset($item['seller_id'])) {
+                $product = Product::find($id);
+                $item['seller_id'] = $product ? $product->seller_id : null;
+            }
+
+            if (isset($userCart[$id])) {
+                $userCart[$id]['quantity'] += $item['quantity'];
+            } else {
+                $userCart[$id] = $item;
+            }
+        }
+
+        session()->put($userCartKey, $userCart);
+        session()->forget($guestCartKey);
+    }
+}
+
 }

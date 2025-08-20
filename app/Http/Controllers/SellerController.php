@@ -37,6 +37,19 @@ class SellerController extends Controller
         return redirect('/seller/products')->with('success', 'Product uploaded!');
     }
 
+    public function orders()
+{
+    $sellerId = auth()->id();
+
+    $orders = EthniOrder::where('seller_id', $sellerId)->latest()->get();
+
+    // stats
+    $totalSales = $orders->sum('quantity');
+    $totalEarnings = $orders->sum('subtotal');
+
+    return view('seller.orders', compact('orders', 'totalSales', 'totalEarnings'));
+}
+
     public function myProducts()
     {
         $products = Product::where('seller_id', Auth::id())->get();
