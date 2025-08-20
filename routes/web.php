@@ -531,3 +531,4 @@ use App\Http\Controllers\SellerStatController;
 Route::get('/seller/stats', [SellerStatController::class, 'index'])
     ->middleware('auth')
     ->name('seller.stats');
+

@@ -27,10 +27,11 @@
                     <i class="fas fa-plus mr-3"></i>
                     <span>Add Product</span>
                 </a>
-                <div class="px-6 py-3 hover:bg-gray-800 transition-colors cursor-pointer">
-                    <i class="fas fa-box mr-3"></i>
-                    <span>Products</span>
-                </div>
+                <a href="#products" class="block px-6 py-3 hover:bg-gray-800 transition-colors cursor-pointer">
+    <i class="fas fa-box mr-3"></i>
+    <span>Products</span>
+</a>
+
                 <div class="px-6 py-3 hover:bg-gray-800 transition-colors cursor-pointer">
                     <i class="fas fa-shopping-cart mr-3"></i>
                     <span>Orders</span>
@@ -197,7 +198,7 @@
                 </div>
                 
                 <!-- Recent Products -->
-<div class="bg-white rounded-lg shadow">
+<div class="bg-white rounded-lg shadow" id="products">
     <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
         <h3 class="text-lg font-semibold text-gray-800">Your Products</h3>
         <span class="text-sm text-gray-500">{{ $products->count() }} total products</span>

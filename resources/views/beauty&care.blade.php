@@ -51,7 +51,7 @@
                     
                     <!-- Larger Image Section -->
                     <div class="relative h-[410px] overflow-hidden">
-                        <img src="{{ asset('images/SkinCare.jpg') }}" alt="Skin Care" class="w-full h-full object-cover" />
+                        <img src="{{ asset('images/skinCare.png') }}" alt="Skin Care" class="w-full h-full object-cover" />
                     </div>
 
                     <!-- Text Section -->
