@@ -36,307 +36,152 @@
 
     <!-- Categories Grid -->
     <div class="container mx-auto px-4 py-16">
-    <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold text-gray-800 mb-4">Explore Our Categories</h2>
-    </div>
-
-    <div class="flex justify-center">
-    <!-- Increased container width -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-7xl px-6">
-        
-        <!-- Fish Category -->
-        <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
-            <a href="{{ url('/C1_Fish&Meat_fish') }}" class="block">
-                <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-green-300 h-[600px]  w-[500px]  flex flex-col">
-                    
-                    <!-- Larger Image Section -->
-                    <div class="relative h-[410px] overflow-hidden">
-                        <img src="{{ asset('images/Fish.jpeg') }}" alt="Fish" class="w-full h-full object-cover" />
-                    </div>
-
-                    <!-- Text Section -->
-                    <div class="p-8 flex-grow">
-                        <h3 class="text-3xl font-bold text-gray-800 mb-3 group-hover:text-green-600 transition-colors">
-                            Fish
-                        </h3>
-                        <p class="text-gray-700 text-base">
-                            Fresh catch from rivers and seas, rich in omega-3 and nutrients
-                        </p>
-                    </div>
-
-                </div>
-            </a>
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Explore Our Categories</h2>
         </div>
 
-        <!-- Meat Category -->
-        <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
-            <a href="{{ url('/C2_Fish&Meat_Meat') }}" class="block">
-                <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-yellow-300 h-[600px]  w-[500px]  flex flex-col">
-                    
-                    <!-- Larger Image Section -->
-                    <div class="relative h-[410px] overflow-hidden">
-                        <img src="{{ asset('images/Meat.jpg') }}" alt="Meat" class="w-full h-full object-cover" />
-                    </div>
-
-                    <!-- Text Section -->
-                    <div class="p-8 flex-grow">
-                        <h3 class="text-3xl font-bold text-gray-800 mb-3 group-hover:text-yellow-600 transition-colors">
-                            Meat
-                        </h3>
-                        <p class="text-gray-700 text-base">
-                            Premium quality cuts of beef, mutton, and chicken from trusted sources
-                        </p>
-                    </div>
-
-                </div>
-            </a>
-        </div>
-
-    </div>
-</div>
-
-</div>
-
-
-    
-<!-- Cart started from here -->
-
-
-
-
-<section class="min-h-screen py-8" style="background: linear-gradient(135deg, #f9fff7 0%, #f0f9e8 50%, #e8f5c8 100%);">
-   <section class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
-    <!-- Header Section -->
-    <div class="container mx-auto px-4 py-8">
-        <div class="text-center mb-8">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-                Ethnic<span class="text-[#6A9793]">Art</span> Collection
-            </h1>
-            <p class="text-base text-gray-600 max-w-2xl mx-auto">
-                Discover our curated selection of beautiful handcrafted furniture and decor
-            </p>
-        </div>
-
-        <!-- Filters and Controls -->
-        <div class="flex flex-col sm:flex-row justify-between items-center mb-6 bg-white rounded-2xl shadow-lg p-4 backdrop-blur-sm">
-            <div class="flex items-center space-x-4 mb-4 sm:mb-0">
-                <h2 class="text-2xl font-bold text-gray-800">{{ count($products) }} Items</h2>
-                <div class="h-6 w-px bg-gray-300"></div>
-                <span class="text-sm text-gray-500">Premium Quality</span>
-            </div>
-            
-            <div class="flex flex-wrap gap-3">
-                <button class="group relative px-6 py-3 bg-white border-2 border-gray-200 rounded-xl text-sm font-medium hover:border-[#6A9793] transition-all duration-300 hover:shadow-md">
-                    <span class="flex items-center gap-2">
-                        Sort by: Featured
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </span>
-                </button>
+        <div class="flex justify-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-7xl px-6">
                 
-                <button class="group relative px-6 py-3 bg-white border-2 border-gray-200 rounded-xl text-sm font-medium hover:border-[#GA9793] transition-all duration-300 hover:shadow-md">
-                    <span class="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L14 15.414V20a1 1 0 01-1.447.894l-4-2A1 1 0 018 18v-2.586L3.293 6.707A1 1 0 013 6V4z" />
-                        </svg>
-                        Filters
-                    </span>
-                </button>
+                <!-- Fish Category -->
+                <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
+                    <a href="{{ url('/C1_Fish&Meat_fish') }}" class="block">
+                        <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-green-300 h-[600px] w-full flex flex-col">
+                            
+                            <!-- Image Section -->
+                            <div class="relative h-64 sm:h-[410px] overflow-hidden">
+                                <img src="{{ asset('images/Fish.jpeg') }}" alt="Fish" class="w-full h-full object-cover" />
+                            </div>
+
+                            <!-- Text Section -->
+                            <div class="p-6 sm:p-8 flex-grow">
+                                <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-3 group-hover:text-green-600 transition-colors">
+                                    Fish
+                                </h3>
+                                <p class="text-gray-700 text-base">
+                                    Fresh catch from rivers and seas, rich in omega-3 and nutrients
+                                </p>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Meat Category -->
+                <div class="group cursor-pointer transform hover:scale-105 transition-all duration-300">
+                    <a href="{{ url('/C2_Fish&Meat_Meat') }}" class="block">
+                        <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-yellow-300 h-[600px] w-full flex flex-col">
+                            
+                            <!-- Image Section -->
+                            <div class="relative h-64 sm:h-[410px] overflow-hidden">
+                                <img src="{{ asset('images/Meat.jpg') }}" alt="Meat" class="w-full h-full object-cover" />
+                            </div>
+
+                            <!-- Text Section -->
+                            <div class="p-6 sm:p-8 flex-grow">
+                                <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-3 group-hover:text-yellow-600 transition-colors">
+                                    Meat
+                                </h3>
+                                <p class="text-gray-700 text-base">
+                                    Premium quality cuts of beef, mutton, and chicken from trusted sources
+                                </p>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+
             </div>
         </div>
-
-       <!-- Products Grid -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-    @foreach($products as $product)
-    <div class="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-sm border border-white/30 overflow-hidden hover:shadow-lg hover:border-orange-200/50 hover:bg-white/95 transition-all duration-300">
-        
-        <!-- Product Image -->
-        <div class="relative aspect-square overflow-hidden bg-gray-100">
-            @if (!empty($product->image))
-            <a href="{{ url('/product/' . $product->id) }}">
-                <img src="{{ asset('storage/' . $product->image) }}" 
-                     alt="{{ $product->name }}" 
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </a>
-            @else
-            <div class="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                <div class="text-center">
-                    <svg class="w-16 h-16 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                    </svg>
-                    <span class="text-sm text-gray-500">No Image</span>
-                </div>
-            </div>
-            @endif
-            
-            <!-- Quick Actions -->
-            <div class="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <button class="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-md flex items-center justify-center hover:bg-white transition-colors" title="Quick View">
-                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-                    </svg>
-                </button>
-                <button class="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-md flex items-center justify-center hover:bg-red-50 transition-colors group/heart" title="Add to Wishlist">
-                    <svg class="w-5 h-5 text-gray-600 group-hover/heart:text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Stock Badge -->
-            @if(isset($product->stock) && $product->stock > 0)
-                @if($product->stock <= 5)
-                <div class="absolute top-4 left-4">
-                    <span class="bg-red-500 text-white text-xs px-2 py-1 rounded-full">Only {{ $product->stock }} left</span>
-                </div>
-                @elseif($product->stock <= 10)
-                <div class="absolute top-4 left-4">
-                    <span class="bg-orange-500 text-white text-xs px-2 py-1 rounded-full">Low Stock</span>
-                </div>
-                @endif
-            @elseif(isset($product->stock) && $product->stock == 0)
-            <div class="absolute top-4 left-4">
-                <span class="bg-gray-500 text-white text-xs px-2 py-1 rounded-full">Out of Stock</span>
-            </div>
-            @endif
-        </div>
-
-        <!-- Product Info -->
-        <div class="p-5">
-            <div class="mb-3">
-                <h3 class="font-semibold text-gray-900 mb-1 line-clamp-1 hover:text-orange-600 transition-colors">
-                    {{ $product->name }}
-                </h3>
-                <p class="text-sm text-gray-600 line-clamp-2">{{ $product->description }}</p>
-            </div>
-            
-            <!-- Rating (Static for now) -->
-            <div class="flex items-center gap-1 mb-4">
-                @for($i = 1; $i <= 5; $i++)
-                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                </svg>
-                @endfor
-                <span class="text-xs text-gray-500 ml-1">(4.8)</span>
-            </div>
-
-  <!-- Price & Add to Cart -->
-<div class="flex items-center justify-between">
-    <span class="text-xl font-bold text-gray-900">
-        ৳{{ number_format($product->price, 2) }} 
-        @if (!empty($product->unit)) / {{ $product->unit }} @endif
-    </span>
-
-<form class="add-to-cart-form" data-product-id="{{ $product->id }}">
-    @csrf
-    <button 
-        type="submit"
-        class="bg-gradient-to-r from-green-600 to-lime-600 hover:from-green-700 hover:to-lime-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 text-sm group/btn shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-        {{ (isset($product->stock) && $product->stock == 0) ? 'disabled' : '' }}
-    >
-        <svg class="w-4 h-4 group-hover/btn:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.293 2.707A1 1 0 007 17h10a1 1 0 001-1v-1M9 21v-8a1 1 0 011-1h4a1 1 0 011 1v8"/>
-        </svg>
-        {{ (isset($product->stock) && $product->stock == 0) ? 'Sold Out' : 'Add to cart' }}
-    </button>
-</form>
-</div>
-
-
-            <!-- Additional Info -->
-            @if(isset($product->category))
-            <div class="mt-3 pt-3 border-t border-gray-100">
-                <span class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">
-                    {{ ucfirst($product->category) }}
-                </span>
-            </div>
-            @endif
-        </div>
     </div>
-    @endforeach
-</div>
 
-<!-- Empty State -->
-@if($products->isEmpty())
-<div class="text-center py-20">
-    <div class="w-32 h-32 bg-white/60 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 border border-white/30">
-        <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/>
-        </svg>
-    </div>
-    <h3 class="text-xl font-semibold text-gray-900 mb-2">No products found</h3>
-    <p class="text-gray-600">Check back later for authentic EthniCart products.</p>
-</div>
-@endif
-
-
-
-      
-    </div>
-</section>
-
-<style>
-    .line-clamp-1 {
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-    
-    .line-clamp-2 {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-</style>
-    <!-- Features Section -->
-    <div class="bg-white bg-opacity-70 backdrop-blur-sm py-16">
+    <!-- Products Grid -->
+    <section class="min-h-screen py-8" style="background: linear-gradient(135deg, #f9fff7 0%, #f0f9e8 50%, #e8f5c8 100%);">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Freshness Guaranteed</h3>
-                    <p class="text-gray-600">Every product is fresh daily and quality inspected</p>
+            <!-- Filters and Controls -->
+            <div class="flex flex-col sm:flex-row justify-between items-center mb-6 bg-white rounded-2xl shadow-lg p-4 backdrop-blur-sm">
+                <div class="flex items-center space-x-4 mb-4 sm:mb-0">
+                    <h2 class="text-2xl font-bold text-gray-800">{{ count($products) }} Items</h2>
+                    <div class="h-6 w-px bg-gray-300"></div>
+                    <span class="text-sm text-gray-500">Premium Quality</span>
                 </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Same Day Delivery</h3>
-                    <p class="text-gray-600">Fresh fish and meat delivered within hours</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Halal Certified</h3>
-                    <p class="text-gray-600">All meat products are halal certified and hygienic</p>
+                
+                <div class="flex flex-wrap gap-3">
+                    <button class="group relative px-4 sm:px-6 py-2 sm:py-3 bg-white border-2 border-gray-200 rounded-xl text-sm font-medium hover:border-[#6A9793] transition-all duration-300 hover:shadow-md">
+                        Sort by: Featured
+                    </button>
+                    <button class="group relative px-4 sm:px-6 py-2 sm:py-3 bg-white border-2 border-gray-200 rounded-xl text-sm font-medium hover:border-[#6A9793] transition-all duration-300 hover:shadow-md">
+                        Filters
+                    </button>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Call to Action -->
-    <div class="bg-gradient-to-r from-green-600 to-emerald-600 py-4">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-xl font-bold text-white mb-2">Ready to Explore?</h2>
-            <p class="text-green-100 text-lg mb-2">Start your culinary journey with EthniCart today</p>
-            <button class="bg-white text-green-600 px-4 py-2 rounded-full font-bold hover:bg-green-50 transition-colors shadow-lg">
-                Shop Now
-            </button>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                @foreach($products as $product)
+                <div class="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-sm border border-white/30 overflow-hidden hover:shadow-lg hover:border-orange-200/50 hover:bg-white/95 transition-all duration-300 w-full">
+                    <!-- Product Image -->
+                    <div class="relative aspect-square overflow-hidden bg-gray-100">
+                        @if (!empty($product->image))
+                        <a href="{{ url('/product/' . $product->id) }}">
+                            <img src="{{ asset('storage/' . $product->image) }}" 
+                                 alt="{{ $product->name }}" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </a>
+                        @else
+                        <div class="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-16 h-16 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                                <span class="text-sm text-gray-500">No Image</span>
+                            </div>
+                        </div>
+                        @endif
+                    </div>
+
+                    <!-- Product Info -->
+                    <div class="p-4 sm:p-5">
+                        <h3 class="font-semibold text-gray-900 mb-1 line-clamp-1 hover:text-orange-600 transition-colors">{{ $product->name }}</h3>
+                        <p class="text-sm text-gray-600 line-clamp-2">{{ $product->description }}</p>
+                        <div class="flex items-center gap-1 mb-4">
+                            @for($i = 1; $i <= 5; $i++)
+                            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            @endfor
+                            <span class="text-xs text-gray-500 ml-1">(4.8)</span>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-gray-900">
+                                ৳{{ number_format($product->price, 2) }} 
+                                @if (!empty($product->unit)) / {{ $product->unit }} @endif
+                            </span>
+                            <form class="add-to-cart-form" data-product-id="{{ $product->id }}">
+                                @csrf
+                                <button 
+                                    type="submit"
+                                    class="bg-gradient-to-r from-green-600 to-lime-600 hover:from-green-700 hover:to-lime-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 text-sm group/btn shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                                    {{ (isset($product->stock) && $product->stock == 0) ? 'disabled' : '' }}
+                                >
+                                    Add to cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+
+            @if($products->isEmpty())
+            <div class="text-center py-20">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">No products found</h3>
+                <p class="text-gray-600">Check back later for authentic EthniCart products.</p>
+            </div>
+            @endif
         </div>
-    </div>
+    </section>
+
 </div>
 
 @endsection
